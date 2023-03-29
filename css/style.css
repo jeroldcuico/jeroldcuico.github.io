@@ -1,0 +1,439 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap");
+
+:root {
+  --primary: #0d6efd;
+  --dark: #21252f;
+  --body: #2e2929;
+  --footer: #888;
+  --white: #ffffff;
+  --box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: "Sora", sans-serif;
+  line-height: 1.7;
+  color: var(--body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.display-4 {
+  color: var(--dark);
+  font-weight: 700;
+}
+
+p {
+  color: var(--dark);
+}
+
+a {
+  color: var(--dark);
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.navbar {
+  box-shadow: var(--box-shadow);
+}
+
+.logo {
+  width: 160px;
+}
+
+.navbar .nav-link {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.navbar-light .navbar-toggler {
+  border: none;
+}
+
+.navbar-watch img {
+  fill: rgba(0, 0, 0, 0.55);
+}
+
+.navbar .nav-link.active {
+  color: var(--primary) !important;
+}
+
+.breadcrumb-item.active {
+  color: var(--primary) !important;
+}
+
+/* .btn {
+  padding: 14px 18px;
+  border-width: 2px;
+  border-radius: 0;
+} */
+
+/* Shopping Cart Page */
+
+
+.progresses {
+  position: relative;
+  max-width: 70%;
+  margin: auto;
+}
+
+.progresses ul {
+  list-style: none;
+  /* border: 1px solid red; */
+  padding: 0;
+}
+
+.progresses ul li {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  z-index: 200;
+  position: relative;
+}
+
+.progresses ul li.blue {
+  color: #3268ff;
+  background-color: #3268ff;
+}
+
+.progresses ul li::after {
+  position: absolute;
+  top: 35px;
+  left: -15px;
+  font-size: 12px;
+  width: 90px;
+}
+
+#step-1::after {
+  content: "Shopping Cart";
+}
+
+#step-2::after {
+  content: "Billing and Shipment";
+  left: -5px;
+}
+
+#step-3::after {
+  content: "Check out";
+}
+
+.progresses .progress {
+  height: 0.8rem;
+  width: 100%;
+  top: 33px;
+  position: absolute;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+
+/* Shopping Cart Page */
+
+
+
+.cart {
+  padding: 5px !important;
+  font-size: 13px;
+  border-width: 2px;
+  border-radius: 0;
+  margin-bottom: 3px;
+}
+
+.hero {
+  background-image: url(../img/cover.jpg);
+  background-position: center;
+  background-size: cover;
+  /* background-attachment: fixed; */
+  position: relative;
+  z-index: 2;
+}
+
+.hero::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(21, 20, 51, 0.8);
+  z-index: -1;
+}
+
+section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.card-effect {
+  box-shadow: var(--box-shadow);
+  background-color: var(--white);
+  padding: 25px;
+  transition: all 0.35s ease;
+}
+
+.card-effect:hover {
+  box-shadow: none;
+  transform: translateY(10px);
+  /* Zoom in */
+}
+
+/* BreadCrumbs override*/
+.breadcrumb {
+  font-size: 13px;
+  font-family: "Sora", sans-serif;
+}
+
+.iconbox {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary);
+  color: var(--white);
+  font-size: 32px;
+  border-radius: 100px;
+  flex: none;
+}
+
+.service {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.service::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background-color: var(--primary);
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.service:hover .iconbox {
+  background-color: var(--white);
+  color: var(--primary);
+}
+
+.service:hover h5,
+.service:hover p {
+  color: var(--white);
+}
+
+.service:hover::after {
+  opacity: 1;
+  top: 0;
+}
+
+.col-img {
+  background-image: url(../img/cover2.jpg);
+  background-position: center;
+  background-size: cover;
+  min-height: 500px;
+}
+
+.product {
+  position: relative;
+  overflow: hidden;
+}
+
+.product .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(42, 41, 87, 0.8);
+  padding: 30px;
+  display: flex;
+  align-items: flex-end;
+  transition: all 0.4s ease;
+  opacity: 0;
+}
+
+.product img {
+  transition: all 0.4s ease;
+}
+
+.product:hover .overlay {
+  opacity: 0.75;
+}
+
+.product:hover img {
+  transform: scale(1.1);
+}
+
+/* Product Details */
+
+.checked {
+  color: #ff9f1a;
+}
+
+.size {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.product-description,
+.blog-description {
+  font-size: 12px;
+}
+
+/* End Product Details */
+
+/* Multi Product Carousel */
+
+@media (max-width: 767px) {
+  .carousel-inner .carousel-item>div {
+    display: none;
+  }
+
+  .carousel-inner .carousel-item>div:first-child {
+    display: block;
+  }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+  gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+
+  .carousel-inner .carousel-item-end.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(25%);
+  }
+
+  .carousel-inner .carousel-item-start.active,
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-25%);
+  }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start {
+  transform: translateX(0);
+}
+
+/* End Carousel */
+
+/* Blog */
+.recent-blogs .body-blog .heading {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.vcard img {
+  width: 80px;
+}
+
+.meta {
+  font-size: 11px;
+}
+
+/* End Blog */
+#btn-checkout {
+  min-width: 100%;
+}
+
+#total,
+#subtotal,
+#tax,
+#cartItem1Price {
+  color: var(--dark);
+}
+
+.shopnow {
+  background-color: var(--dark);
+  padding: 10px 20px;
+  font-size: 30px;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.shopnow:hover {
+  text-decoration: none;
+  color: white;
+  background-color: var(--primary);
+}
+
+.pricing i {
+  font-size: 20px;
+  color: var(--primary);
+}
+
+.pricing ul li {
+  margin-top: 8px;
+}
+
+.member img {
+  width: 125px;
+  height: 125px;
+  border-radius: 100px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons a {
+  width: 34px;
+  height: 34px;
+  background-color: var(--primary);
+  border-radius: 2px solid var(--primary);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  margin-left: 10px;
+  transition: all 0.4s ease;
+  border: 2px solid var(--primary);
+}
+
+.social-icons a:hover {
+  background-color: transparent;
+  border-color: var(--primary);
+}
+
+.footer-top {
+  color: var(--footer);
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background-color: var(--dark);
+}
+
+.footer-top a {
+  color: var(--footer);
+}
+
+.footer-top a:hover {
+  color: var(--white);
+}
+
+.footer-bottom {
+  background-color: #242933;
+  color: var(--footer);
+}
+
+.footer-bottom p {
+  color: var(--footer);
+}

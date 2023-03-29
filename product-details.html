@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/boxicons.min.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/sidebar.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Product Name | TimeSpace</title>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg py-3 sticky-top navbar-light bg-white">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img class="logo" src="img/logo.jpg" alt="" />
+                <i class="fa-solid fa-watch-fitness"></i>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- <span class="navbar-toggler-icon"></span> -->
+                <img class="navbar-watch" src="img/watch.svg" alt="Watch" />
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Products</a>
+                        <!-- Making a separate page-->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="row">
+                    <div class="col-auto me-auto">
+                        <a class="btn btn-primary btn-lg py-3 rounded-0 ms-lg-3 d-block" href="login.html">My Account</a>
+                    </div>
+                    <div class="col-auto d-flex align-items-center">
+                        <a class="link link-primary" href="cart.html">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- PRODUCT DETAILS -->
+
+    <section class="py-1">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="row gx-4 gx-lg-5 align-items-center">
+                <div class="col-md-6">
+                    <!-- MAIN IMAGE -->
+                    <div class="gallery px-2">
+                        <div class="row" id="main-image">
+                            <div class="col">
+                                <img id="productImage" class="card-img-top mb-5 mb-md-0" src="./img/pro1.jpg"
+                                    alt="productname">
+                            </div>
+                        </div>
+                        <!-- SUB-IMAGE -->
+                        <div class="row gx-1" id="sub-image">
+                            <div class="col d-flex align-items-stretch">
+                                <div class="card">
+                                    <img id="productImage" src="./img/pro1.jpg" alt="productname">
+                                </div>
+                            </div>
+                            <div class="col d-flex align-items-stretch">
+                                <div class="card">
+                                    <img id="productImage" src="./img/pro2.jpg" alt="productname">
+                                </div>
+                            </div>
+                            <div class="col d-flex align-items-stretch">
+                                <div class="card">
+                                    <img id="productImage" src="./img/pro4.jpg" alt="productname">
+                                </div>
+                            </div>
+                            <div class="col d-flex align-items-stretch">
+                                <div class="card">
+                                    <img id="productImage" src="./img/pro3.jpg" alt="productname">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END MAIN IMAGE -->
+                </div>
+                <!-- PRODUCT DETAILS -->
+                <div class="col-md-6">
+                    <!-- BREADCRUMB -->
+                    <div class="navigation-breadcrumbs">
+                        <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
+                            aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item ">Product Category</li>
+                                <li class="breadcrumb-item active" aria-current="page">Product Item Details </li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <!-- PRODUCT NAME -->
+                    <h2 class="fw-bolder">Product Name</h2>
+                    <!-- PRODUCT ID -->
+                    <div class="small mb-1">Product ID: KDG-123</div>
+                    <!-- RATING AND REVIEWS -->
+                    <div class="rating-reviews">
+                        <div class="stars">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <span class="review-no">41 reviews</span>
+                    </div>
+                    <!-- PRICETAG -->
+                    <div class="fs-5 price-tag">
+                        <span class="text-decoration-line-through text-danger">Php 5,000.00</span>
+                        <span>Php 4,300.00</span>
+                    </div>
+                    <!-- AVAILABILITY -->
+                    <div class="availability">
+                        <span class="badge bg-success">Instock</span>
+                        <span class="badge bg-danger">Out of Stock</span>
+                    </div>
+                    <!-- PRODUCT DESCRIPTION -->
+                    <div class="product-description py-3">
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Excepturi
+                            enim tenetur, voluptas tempore quis, ad praesentium laboriosam cum explicabo illum, sint
+                            corporis consectetur accusantium at atque facere iste nostrum cumque!</span>
+                    </div>
+                    <!-- SIZES -->
+                    <div class="sizes">
+                        <h6 class="sizes text-primary d-inline">Sizes:</h6>
+                        <span class="size" data-toggle="tooltip" title="small">s</span>
+                        <span class="size" data-toggle="tooltip" title="medium">m</span>
+                        <span class="size" data-toggle="tooltip" title="large">l</span>
+                        <span class="size" data-toggle="tooltip" title="xtra large">xl</span>
+                    </div>
+                    <!-- QUANTITY -->
+                    <div class="quantity py-2">
+                        <div class="px-0">
+                            <label for="quantityNumber">Quantity:</label> <input
+                                class="form-control text-center d-inline" id="quantityNumber" type="num" value="1"
+                                style="max-width: 3rem">
+                        </div>
+                    </div>
+                    <!-- ACTION BUTTONS -->
+                    <div class="text-nowrap action-buttons " id="actionButtons">
+                        <button type="button" class=" btn btn-success" data-bs-toggle="modal"
+                            data-bs-target="#modal_cart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            Add to Cart
+                        </button>
+                        <button class="btn btn-info text-white" data-bs-toggle="modal" data-bs-target="#modal_wish"
+                            type="button">
+                            <i class="fa-solid fa-plus"></i>
+                            Wishlist
+                        </button>
+                        <button class="btn btn-danger rounded text-white" data-bs-toggle="modal"
+                            data-bs-target="#modal_love" type="button">
+                            <i class="fa-solid fa-heart"></i>
+                        </button>
+                        <!-- Modal Cart-->
+                        <div class="modal fade" id="modal_cart" tabindex="-1" aria-labelledby="Cart_Modal"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="toast-header">
+                                        <strong class="me-auto">TimeSpace</strong>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="toast-body">
+                                        Added to Cart Successfully
+                                        <div class="mt-2 pt-2 border-top">
+                                            <a class="border-0 btn-primary btn-sm" href="cart.html">Go to Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal Wishlists-->
+                        <div class="modal fade" id="modal_wish" tabindex="-1" aria-labelledby="Wish_Modal"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="toast-header">
+                                        <strong class="me-auto">TimeSpace</strong>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="toast-body">
+                                        Added to Wishlist
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal Wishlists-->
+                        <div class="modal fade" id="modal_love" tabindex="-1" aria-labelledby="Love_Modal"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="toast-header">
+                                        <strong class="me-auto">TimeSpace</strong>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="toast-body">
+                                        Added to Favourites
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- RELATED PRODUCTS-->
+    <section class="bg-light">
+        <div class="container text-center my-3">
+            <h2 class="font-weight-light text-primary">Related Products</h2>
+            <div class="row mx-auto my-auto justify-content-center">
+                <div id="relatedproducts-watch" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <div class="col-md-3 d-flex align-items-stretch">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="./img/pro1.jpg" alt="Product 1" class="img-fluid" />
+                                    </div>
+                                    <!-- <div class="card-img-overlay">Slide 1</div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-md-3 d-flex align-items-stretch">
+                                <div class="card">
+                                    <div class="card-img"> <img src="./img/pro2.jpg" alt="Product 1"
+                                            class="img-fluid" /> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-md-3 d-flex align-items-stretch">
+                                <div class="card">
+                                    <div class="card-img"> <img src="./img/pro3.jpg" alt="Product 1"
+                                            class="img-fluid" /> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-md-3 d-flex align-items-stretch">
+                                <div class="card">
+                                    <div class="card-img"> <img src="./img/pro4.jpg" alt="Product 1"
+                                            class="img-fluid" /> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-md-3 d-flex align-items-stretch">
+                                <div class="card">
+                                    <div class="card-img"> <img src="./img/pro5.jpg" alt="Product 1"
+                                            class="img-fluid" /> </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-md-3 d-flex align-items-stretch">
+                                <div class="card">
+                                    <div class="card-img"> <img src="./img/pro1.jpg" alt="Product 1"
+                                            class="img-fluid" /> </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div> <a class="carousel-control-prev bg-transparent w-aut" href="#relatedproducts-watch"
+                        role="button" data-bs-slide="prev"> <span class="carousel-control-prev-icon"
+                            aria-hidden="true"></span> </a>
+                    <a class="carousel-control-next bg-transparent w-aut" href="#relatedproducts-watch" role="button"
+                        data-bs-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-lg-3">
+                        <img class="logo" src="img/logo-white.svg" alt="" />
+                    </div>
+                    <div class="col-lg-2">
+                        <h6 class="text-white">Shop Watches</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="shop.html">Products</a></li>
+                            <li><a href="#">Featured Products</a></li>
+                            <li><a href="#">Sale Products</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3">
+                        <h6 class="text-white">Explore</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="faq.html">FAQ's</a></li>
+                            <li><a href="privacy-policy.html">Privacy & Policy</a></li>
+                            <li><a href="terms.html">Terms and Conditions</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4">
+                        <h6 class="text-white">Get Latest News and Offers</h6>
+                        <div class="form-group">
+                            <form action="index.html" class="d-flex gap-1">
+                                <input type="email" required class="form-control form-control-sm"
+                                    placeholder="Email Address">
+                                <button type="button" class="btn btn-sm btn-warning rounded">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom py-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 mb-2">
+                        <p class="mb-0 text-center">© 2023 copyright all right reserved</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="social-icons">
+                            <!-- Facebook -->
+                            <a href="#" role="button"><i class="fab fa-facebook-f"></i></a>
+                            <!-- Twitter -->
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <!-- Instagram -->
+                            <a href="#!"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let items = document.querySelectorAll('.carousel .carousel-item')
+
+        items.forEach((el) => {
+            const productlist = 4
+            let next = el.nextElementSibling
+            for (var i = 1; i < productlist; i++) {
+                if (!next) {
+                    // wrap carousel by using first child
+                    next = items[0]
+                }
+                let cloneChild = next.cloneNode(true)
+                el.appendChild(cloneChild.children[0])
+                next = next.nextElementSibling
+            }
+        })
+
+    </script>
+</body>
+
+</html>

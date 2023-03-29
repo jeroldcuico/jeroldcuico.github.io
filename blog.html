@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon.ico">
+    <link rel="stylesheet" href="./css/boxicons.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/sidebar.css">
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>BLOG | TimeSpace </title>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg py-3 sticky-top navbar-light bg-white">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img class="logo" src="img/logo.jpg" alt="" />
+                <i class="fa-solid fa-watch-fitness"></i>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- <span class="navbar-toggler-icon"></span> -->
+                <img class="navbar-watch" src="img/watch.svg" alt="Watch" />
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Products</a>
+                        <!-- Making a separate page-->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="row">
+                    <div class="col-auto me-auto">
+                        <a class="btn btn-primary btn-lg py-3 rounded-0 ms-lg-3 d-block" href="login.html">My Account</a>
+                    </div>
+                    <div class="col-auto d-flex align-items-center">
+                        <a class="link link-primary" href="cart.html">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                    </div>
+                </div>
+    </nav>
+    <!-- BREADCRUMB -->
+    <div class="navigation-breadcrumbs">
+        <div class="container px-md-5 pt-3 d-flex justify-content-between align-items-center">
+            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
+                aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Blog</li>
+                </ol>
+            </nav>
+            <form action="#" class="search-form">
+                <div class="form-group d-flex align-items-center gap-1">
+                    <input type="text" class="form-control form-control-sm" placeholder="Search">
+                    <button class="border-0 btn-sm btn-primary"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- BLOG -->
+    <section id="blog" class="py-3">
+        <div class="container px-md-5">
+            <div class="responsive-tab-sidebar d-block d-lg-none"> <!-- Display on Mid to XS screens-->
+                <select class="form-select" aria-label="Categories">
+                    <optgroup label="Blog Categories">
+                        <option>Entertainment</option>
+                        <option>Fashion</option>
+                        <option>Design</option>
+                        <option>Marketing</option>
+                        <option>Technology</option>
+                        <option>Social Media</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 px-3">
+                    <h2 class="text-danger">Latest Blogs of TimeSpace</h2>
+                    <p class="mb-5">
+                        <img src="./img/blog1.jpg" alt="Blog" class="img-fluid">
+                    </p>
+                    <h2 class="mb-3">Breguet classique VS IWC</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, eius mollitia suscipit,
+                        quisquam doloremque distinctio perferendis et doloribus unde architecto optio laboriosam
+                        porro adipisci sapiente officiis nemo accusamus ad praesentium? Esse minima nisi et. Dolore
+                        perferendis, enim praesentium omnis, iste doloremque quia officia optio deserunt molestiae
+                        voluptates soluta architecto tempora.</p>
+                    <p>Molestiae cupiditate inventore animi, maxime sapiente optio, illo est nemo veritatis repellat
+                        sunt doloribus nesciunt! Minima laborum magni reiciendis qui voluptate quisquam voluptatem
+                        soluta illo eum ullam incidunt rem assumenda eveniet eaque sequi deleniti tenetur dolore
+                        amet fugit perspiciatis ipsa, odit. Nesciunt dolor minima esse vero ut ea, repudiandae
+                        suscipit!</p>
+                    <h2 class="mb-3 mt-5">#2. Create World Class Watches </h2>
+                    <p>Temporibus ad error suscipit exercitationem hic molestiae totam obcaecati rerum, eius aut,
+                        in. Exercitationem atque quidem tempora maiores ex architecto voluptatum aut officia
+                        doloremque. Error dolore voluptas, omnis molestias odio dignissimos culpa ex earum nisi
+                        consequatur quos odit quasi repellat qui officiis reiciendis incidunt hic non? Debitis
+                        commodi aut, adipisci.</p>
+                    <p class="mb-5">
+                        <img src="./img/cover2.jpg" alt="" class="img-fluid">
+                    </p>
+                    <p>Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. Nihil explicabo
+                        quod, est eos ipsum. Unde aut non tenetur tempore, nisi culpa voluptate maiores officiis
+                        quis vel ab consectetur suscipit veritatis nulla quos quia aspernatur perferendis, libero
+                        sint. Error, velit, porro. Deserunt minus, quibusdam iste enim veniam, modi rem maiores.</p>
+                    <p>Odit voluptatibus, eveniet vel nihil cum ullam dolores laborum, quo velit commodi rerum eum
+                        quidem pariatur! Quia fuga iste tenetur, ipsa vel nisi in dolorum consequatur, veritatis
+                        porro explicabo soluta commodi libero voluptatem similique id quidem? Blanditiis voluptates
+                        aperiam non magni. Reprehenderit nobis odit inventore, quia laboriosam harum excepturi ea.
+                    </p>
+                    <p>Adipisci vero culpa, eius nobis soluta. Dolore, maxime ullam ipsam quidem, dolor distinctio
+                        similique asperiores voluptas enim, exercitationem ratione aut adipisci modi quod quibusdam
+                        iusto, voluptates beatae iure nemo itaque laborum. Consequuntur et pariatur totam fuga
+                        eligendi vero dolorum provident. Voluptatibus, veritatis. Beatae numquam nam ab voluptatibus
+                        culpa, tenetur recusandae!</p>
+                    <p>Voluptas dolores dignissimos dolorum temporibus, autem aliquam ducimus at officia adipisci
+                        quasi nemo a perspiciatis provident magni laboriosam repudiandae iure iusto commodi debitis
+                        est blanditiis alias laborum sint dolore. Dolores, iure, reprehenderit. Error provident,
+                        pariatur cupiditate soluta doloremque aut ratione. Harum voluptates mollitia illo minus
+                        praesentium, rerum ipsa debitis, inventore?</p>
+                    <div class="tag-widget post-tag-container mb-5 mt-5">
+                        <div class="tagcloud">
+                            <ul>
+                                <li><a href="#" class="tag-cloud-link">Life</a></li>
+                                <li><a href="#" class="tag-cloud-link">Fashion</a></li>
+                                <li><a href="#" class="tag-cloud-link">Tech</a></li>
+                                <li><a href="#" class="tag-cloud-link">Technology</a></li>
+                                <li><a href="#" class="tag-cloud-link">Travel</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="about-author d-flex p-4 bg-light">
+                        <div class="bio mr-5">
+                            <img src="./img/team1.jpg" alt="Image" class="img-fluid mb-4">
+                        </div>
+                        <div class="desc px-3">
+                            <h3>Jerold Cuico</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem
+                                necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa
+                                sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>
+                        </div>
+                    </div>
+                    <div class="pt-5 mt-5">
+                        <h3 class="mb-5">6 Comments</h3>
+                        <div class="row comment-list">
+                            <div class="col-auto comment">
+                                <div class="vcard bio">
+                                    <img src="./img/team1.jpg" alt="Image placeholder">
+                                </div>
+                            </div>
+                            <div class="col-10 comment-body">
+                                <h3>John Doe</h3>
+                                <div class="meta mb-3">November 13, 2019 at 2:21pm</div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem
+                                    laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe
+                                    enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?
+                                </p>
+                                <p><a href="#" class="reply">Reply</a></p>
+                            </div>
+                        </div>
+
+                        <div class="comment-form-wrap pt-5">
+                            <h3 class="mb-5">Leave a comment</h3>
+                            <form action="#" class="p-5 bg-light">
+                                <div class="form-group">
+                                    <label for="name">Name *</label>
+                                    <input type="text" class="form-control" id="name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email *</label>
+                                    <input type="email" class="form-control" id="email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="website">Website</label>
+                                    <input type="url" class="form-control" id="website">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea name="" id="message" cols="30" rows="10" class="form-control"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" value="Post Comment" class="btn py-3 px-4 btn-primary">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 flex-shrink-0 p-0 bg-white">
+                    <ul class="list-unstyled ps-0 d-none d-lg-block">
+                        <li class="my-3"></li>
+                        <li class="mb-1">
+                            <button class="btn btn-toggle text-primary align-items-center rounded collapsed"
+                                data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="true">
+                                Blog Categories
+                            </button>
+                            <div class="collapse show" id="account-collapse">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a href="#" class="link-dark rounded">Entertainment</a></li>
+                                    <li><a href="#" class="link-dark rounded">Fashion</a></li>
+                                    <li><a href="#" class="link-dark rounded">Design</a></li>
+                                    <li><a href="#" class="link-dark rounded">Marketing</a></li>
+                                    <li><a href="#" class="link-dark rounded">Social Media</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <hr>
+                    </ul>
+                    <div class="recent-blogs">
+                        <div class="container">
+                            <h5 class="text-primary px-2">Recent Blogs</h5>
+                            <!-- Blog Item 1 -->
+                            <div class="row block-img d-flex blog-item py-3">
+                                <a class="col-md-3 blog-img">
+                                    <img src="./img/blog3.jpg" alt="Blog">
+                                </a>
+                                <div class="col-md-9 body-blog">
+                                    <span class="heading py-2"><a href="#">Blog Name</a></span>
+                                    <p class="blog-description">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                        elit. Tempora, aut repellendus rerum ut nam hic.</p>
+                                    <div class="meta d-flex gap-2">
+                                        <div><a href="#"><i class="fa-solid fa-calendar"></i> Mar. 29, 2023</a></div>
+                                        <div><a href="#"><i class="fa-regular fa-user"></i> Admin</a></div>
+                                        <div><a href="#"><i class="fa-regular fa-comment"></i>19</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Blog Item 2 -->
+                            <div class="row block-img d-flex blog-item py-3">
+                                <a class="col-md-3 blog-img">
+                                    <img src="./img/blog2.jpg" alt="Blog">
+                                </a>
+                                <div class="col-md-9 body-blog">
+                                    <span class="heading py-2"><a href="#">Blog Name</a></span>
+                                    <p class="blog-description">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                        elit. Tempora, aut repellendus rerum ut nam hic.</p>
+                                    <div class="meta d-flex gap-2">
+                                        <div><a href="#"><i class="fa-solid fa-calendar"></i> Mar. 29, 2023</a></div>
+                                        <div><a href="#"><i class="fa-regular fa-user"></i> Admin</a></div>
+                                        <div><a href="#"><i class="fa-regular fa-comment"></i>19</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Blog Item 3 -->
+                            <div class="row block-img d-flex blog-item py-3">
+                                <a class="col-md-3 blog-img">
+                                    <img src="./img/blog1.jpg" alt="Blog">
+                                </a>
+                                <div class="col-md-9 body-blog">
+                                    <span class="heading py-2"><a href="#">Blog Name</a></span>
+                                    <p class="blog-description">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                        elit. Tempora, aut repellendus rerum ut nam hic.</p>
+                                    <div class="meta d-flex gap-2">
+                                        <div><a href="#"><i class="fa-solid fa-calendar"></i> Mar. 29, 2023</a></div>
+                                        <div><a href="#"><i class="fa-regular fa-user"></i> Admin</a></div>
+                                        <div><a href="#"><i class="fa-regular fa-comment"></i>19</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-top">
+          <div class="container">
+            <div class="row gy-4">
+              <div class="col-lg-3">
+                <img class="logo" src="img/logo-white.svg" alt="" />
+              </div>
+              <div class="col-lg-2">
+                <h6 class="text-white">Shop Watches</h6>
+                <ul class="list-unstyled">
+                  <li><a href="shop.html">Products</a></li>
+                  <li><a href="#">Featured Products</a></li>
+                  <li><a href="#">Sale Products</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-3">
+                <h6 class="text-white">Explore</h6>
+                <ul class="list-unstyled">
+                  <li><a href="faq.html">FAQ's</a></li>
+                  <li><a href="privacy-policy.html">Privacy & Policy</a></li>
+                  <li><a href="terms.html">Terms and Conditions</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-4">
+                <h6 class="text-white">Get Latest News and Offers</h6>
+                <div class="form-group">
+                  <form action="index.html" class="d-flex gap-1">
+                    <input type="email" required class="form-control form-control-sm" placeholder="Email Address">
+                    <button type="button" class="btn btn-sm btn-warning rounded">Subscribe</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom py-3">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 mb-2">
+                <p class="mb-0 text-center">© 2023 copyright all right reserved</p>
+              </div>
+              <div class="col-md-6">
+                <div class="social-icons">
+                  <!-- Facebook -->
+                  <a href="#" role="button"><i class="fab fa-facebook-f"></i></a>
+                  <!-- Twitter -->
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <!-- Instagram -->
+                  <a href="#!"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
