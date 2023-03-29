@@ -68,7 +68,7 @@
                 aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                    <li class="breadcrumb-item active" aria-current="page">Shopping Cart</li>
                 </ol>
             </nav>
         </div>
@@ -88,7 +88,8 @@
                 </div>
             </div>
             <div class="heading">
-                <h3 class="text-danger">My Cart</h3>
+                <h2 class="text-danger">My Cart</h2>
+                <a href="shop.html" class="link link-primary mb-2"><< Continue Shopping</a>
             </div>
             <div class="row gx-1 align-items-start">
                 <!-- ITEMS LEFT SECTION -->
@@ -229,36 +230,42 @@
                     <div class="checkout">
                         <div class="row align-items-center">
                             <h3 class="text-primary">Order Summary</h3>
-                            <div class="col">
+                            <div class="col  my-3">
                                 <h6>Subtotal</h6>
                             </div>
                             <div class="col-auto">
-                                <span class="text-danger fw-bold">Php 3,000.00</span>
+                                <span class="text-danger fw-bold">Php 3,000</span>
                             </div>
                         </div>
-                        <div class="row align-items-center">
+                        <div class="row align-items-center mb-3">
                             <div class="col">
                                 <h6>TAX</h6>
                             </div>
                             <div class="col-auto">
-                                <span class="text-danger fw-bold">Php 100.00</span>
+                                <span class="text-danger fw-bold">Php 100</span>
                             </div>
                         </div>
                         <hr>
-                        <div class="row align-items-center">
+                        <div class="row align-items-center mb-3">
                             <div class="col">
                                 <h6>TOTAL</h6>
                             </div>
                             <div class="col-auto">
-                                <span class="text-danger fw-bold">Php 3,100.00</span>
+                                <span class="text-danger fw-bold">Php 3,100</span>
                             </div>
                         </div>
-
+                        <form class="pb-4">
+                            <div class="input-group">
+                                <input type="text" class="form-control " placeholder="Promo code">
+                                <button class="btn btn-success text-white w-100 mt-1"><span>REDEEM</span></button>
+                            </div>
+                        </form>
 
                         <a href="checkout.html"><button id="btn-checkout"
-                                class="shopnow"><span>Checkout</span></button></a>
+                                class="shopnow"><span>Continue</span></button></a>
                     </div>
                 </div>
+                <a href="shop.html" class="link link-primary"><< Continue Shopping</a>
             </div>
     </section>
 
