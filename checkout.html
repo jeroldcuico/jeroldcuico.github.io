@@ -51,7 +51,8 @@
                 </ul>
                 <div class="row">
                     <div class="col-auto me-auto">
-                        <a class="btn btn-primary btn-lg py-3 rounded-0 ms-lg-3 d-block" href="login.html">My Account</a>
+                        <a class="btn btn-primary btn-lg py-3 rounded-0 ms-lg-3 d-block" href="login.html">My
+                            Account</a>
                     </div>
                     <div class="col-auto d-flex align-items-center">
                         <a class="link link-primary" href="cart.html">
@@ -67,7 +68,7 @@
                 aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item" aria-current="page">Shopping Cart</li>
+                    <li class="breadcrumb-item"><a href="cart.html">Shopping Cart</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Checkout</li>
                 </ol>
             </nav>
@@ -84,7 +85,7 @@
                     <li id="step-3"></li>
                 </ul>
                 <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="25"
+                    <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75"
                         aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
             </div>
@@ -99,48 +100,114 @@
                 </div>
             </div>
             <div class="row g-5">
-                <div class="col-md-5 col-lg-4 order-md-last">
+                <div class="col-md-5 col-lg-5 order-md-last">
                     <h4 class="d-flex justify-content-between align-items-center mb-3">
-                        <span class="text-primary">Your cart</span>
+                        <span class="text-primary">My cart</span>
                         <span class="badge bg-primary rounded-pill">3</span>
                     </h4>
+                    <div class="cartItems items p-3 border mb-3">
+                        <div class="d-flex justify-content-end">
+                            <button type="button" class="btn-close" aria-label="Close"></button>
+                        </div>
+                        <div class="row align-items-center justify-content-start">
+
+                            <div class="col-lg-2 col-md-3 col-sm-4 p-0">
+                                <img src="./img/pro1.jpg" alt="Product">
+                            </div>
+                            <div class="col-lg-10 col-md-9 col-sm-8">
+                                <div class="product-name">
+                                    <a href="product-details.html">
+                                        <span class="text-dark fw-bold">Product Watch Name 1</span>
+                                    </a>
+                                    <p class="product-description">Lorem ipsum dolor sit, amet consectetur
+                                        adipisicing elit.</p>
+                                </div>
+
+                                <div class="qty-pricing d-flex align-items-center justify-content-between gap-3">
+                                    <div class="qty">
+                                        <span class="text-danger fw-bold">Qty:</span> 1
+                                    </div>
+
+                                    <div class="pricing">
+                                        <span class="text-danger fw-bold">Total Price:</span> Php 1,500
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cartItems items p-3 border mb-3">
+                        <div class="d-flex justify-content-end">
+                            <button type="button" class="btn-close" aria-label="Close"></button>
+                        </div>
+                        <div class="row align-items-center justify-content-start">
+
+                            <div class="col-lg-2 col-md-3 col-sm-4 p-0">
+                                <img src="./img/pro3.jpg" alt="Product 3">
+                            </div>
+                            <div class="col-lg-10 col-md-9 col-sm-8">
+                                <div class="product-name">
+                                    <a href="product-details.html">
+                                        <span class="text-dark fw-bold">Product Watch Name 3</span>
+                                    </a>
+                                    <p class="product-description">Lorem ipsum dolor sit, amet consectetur
+                                        adipisicing elit.</p>
+                                </div>
+
+                                <div class="qty-pricing d-flex align-items-center justify-content-between gap-3">
+                                    <div class="qty">
+                                        <span class="text-danger fw-bold">Qty:</span> 2
+                                    </div>
+
+                                    <div class="pricing">
+                                        <span class="text-danger fw-bold">Total Price:</span> Php 1,500
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cartItems items p-3 border mb-3">
+                        <div class="d-flex justify-content-end">
+                            <button type="button" class="btn-close" aria-label="Close"></button>
+                        </div>
+                        <div class="row align-items-center justify-content-start">
+
+                            <div class="col-lg-2 col-md-3 col-sm-4 p-0">
+                                <img src="./img/pro4.jpg" alt="Product 4">
+                            </div>
+                            <div class="col-lg-10 col-md-9 col-sm-8">
+                                <div class="product-name">
+                                    <a href="product-details.html">
+                                        <span class="text-dark fw-bold">Product Watch Name 4</span>
+                                    </a>
+                                    <p class="product-description">Lorem ipsum dolor sit, amet consectetur
+                                        adipisicing elit.</p>
+                                </div>
+
+                                <div class="qty-pricing d-flex align-items-center justify-content-between gap-3">
+                                    <div class="qty">
+                                        <span class="text-danger fw-bold">Qty:</span> 1
+                                    </div>
+
+                                    <div class="pricing">
+                                        <span class="text-danger fw-bold">Total Price:</span> Php 1,500
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <ul class="list-group mb-3">
-                        <li class="list-group-item d-flex justify-content-between lh-sm">
-                            <div>
-                                <h6 class="my-0">Product Watch 1</h6>
-                                <small class="text-muted">Best Quality</small>
+                        <li class="list-group-item d-flex justify-content-between lh-lg">
+                            <div class="total_pricing">
+                                <h3 class="my-0 fw-bold text-danger">Total</h3>
+                                <small class="text-muted">Promo Code applied</small>
                             </div>
-                            <span class="text-muted">Php 1,300</span>
+                            <span class="text-muted fw-bold">Php 4,500</span>
                         </li>
-                        <li class="list-group-item d-flex justify-content-between lh-sm">
-                            <div>
-                                <h6 class="my-0">Product Watch 2</h6>
-                                <small class="text-muted">Best product</small>
-                            </div>
-                            <span class="text-muted">Php 1,500</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between lh-sm">
-                            <div>
-                                <h6 class="my-0">Product Watch 3</h6>
-                                <small class="text-warning">Secondhand</small>
-                            </div>
-                            <span class="text-muted">Php 1,000</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between bg-light">
-                            <div class="text-success">
-                                <h6 class="my-0">Promo code</h6>
-                                <small>SALE500</small>
-                            </div>
-                            <span class="text-success">Php 500</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between">
-                            <span>Total</span>
-                            <strong>Php 5,000</strong>
-                        </li>
-                        
+
+
                     </ul>
                 </div>
-                <div class="col-md-7 col-lg-8">
+                <div class="col-md-7 col-lg-7 ">
                     <h4 class="mb-3">Billing address</h4>
                     <form class="needs-validation" novalidate>
                         <div class="row g-3">
@@ -254,7 +321,7 @@
                                         required>
                                     <label class="form-check-label" for="paypal">Paypal</label>
                                 </div>
-                                
+
                             </div>
                         </div>
                         <div class="row gy-3">
@@ -292,8 +359,7 @@
                             </div>
                         </div>
                         <hr class="my-4">
-                        <a href="checkout.html"><button id="btn-checkout" class="shopnow"><span
-                                    class="text-md-nowrap">
+                        <a href="checkout.html"><button id="btn-checkout" class="shopnow"><span class="text-md-nowrap">
                                     checkout</span></button></a>
                     </form>
                 </div>
