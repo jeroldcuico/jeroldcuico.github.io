@@ -151,11 +151,13 @@
                     </div>
                     <!-- SIZES -->
                     <div class="sizes">
-                        <h6 class="sizes text-primary d-inline">Sizes:</h6>
-                        <span class="size" data-toggle="tooltip" title="small">s</span>
-                        <span class="size" data-toggle="tooltip" title="medium">m</span>
-                        <span class="size" data-toggle="tooltip" title="large">l</span>
-                        <span class="size" data-toggle="tooltip" title="xtra large">xl</span>
+                        <h6 class="text-uppercase">Size</h6>
+                        <input type="radio" class="btn-check" name="size" id="small" autocomplete="off">
+                        <label class="btn btn-outline-warning rounded-1 mb-2" for="small">Small</label>
+                        <input type="radio" class="btn-check" name="size" id="medium" autocomplete="off">
+                        <label class="btn btn-outline-warning rounded-1 mb-2" for="medium">Medium</label>
+                        <input type="radio" class="btn-check" name="size" id="large" autocomplete="off">
+                        <label class="btn btn-outline-warning rounded-1 mb-2" for="large">Large</label>
                     </div>
                     <!-- QUANTITY -->
                     <div class="quantity py-2">
@@ -237,9 +239,137 @@
             </div>
         </div>
     </section>
-    <section>
-        <div class="container bg-light">
-            <h3>Product Ratings</h3>
+    <section class="p-2">
+        <div class="container bg-light p-3">
+            <h6 class="text-danger">Product Description</h6>
+            <div class="card p-3">
+                <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel maxime
+                    quisquam similique sit sed, quaerat nisi asperiores odio eius beatae numquam incidunt commodi veniam
+                    natus ipsum voluptatibus officia a repellat molestias blanditiis iure explicabo illo dolorum esse
+                </p>
+                <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel maxime
+                    quisquam similique sit sed, quaerat nisi asperiores odio eius beatae numquam incidunt commodi veniam
+                    natus ipsum voluptatibus officia a repellat molestias blanditiis iure explicabo illo dolorum esse
+                </p>
+                <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel maxime
+                    quisquam similique sit sed, quaerat nisi asperiores odio eius beatae numquam incidunt commodi veniam
+                    natus ipsum voluptatibus officia a repellat molestias blanditiis iure explicabo illo dolorum esse
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="pt-2">
+        <div class="container bg-light p-3">
+            <h6 class="text-danger">Customer Review</h6>
+            <div class="card mb-3">
+                <div class="card-body m-3">
+                    <div class="row">
+                        <div class="col-lg-1 col-md-3 d-flex justify-content-center align-items-start mb-4 mb-lg-0">
+                            <img src="img/team2.jpg" class="rounded-circle img-fluid shadow-1" alt="User1" />
+                        </div>
+                        <div class="col-lg-11 col-md-9">
+                            <div class="rating-reviews">
+                                <div class="stars">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                            </div>
+                            <p class="fw-bold lead product-description"><strong>Anna Smith</strong></p>
+                            <p class="text-muted fw-light product-description">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quam sapiente
+                                molestiae numquam quas, voluptates omnis nulla ea odio quia similique
+                                corrupti magnam.
+                            </p>
+                            <p class="product-description d-flex gap-3"><a href="#" class="reply">Reply</a> <a href="#" class="like">Like</a></p>
+                            <div class="row">
+                                <div class="col-lg-1 col-md-3 d-flex justify-content-center align-items-start mb-4 mb-lg-0">
+                                    <img src="img/team3.jpg" class="rounded-circle img-fluid shadow-1" alt="User1" />
+                                </div>
+                                <div class="col-lg-11 col-md-9">
+                                    <div class="rating-reviews">
+                                        <div class="stars">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                    </div>
+                                    <p class="fw-bold lead product-description"><strong>John Davis</strong></p>
+                                    <p class="text-muted fw-light product-description">
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quam sapiente
+                                        molestiae numquam quas, voluptates omnis nulla ea odio quia similique
+                                        corrupti magnam.
+                                    </p>
+                                    <form action="">
+                                        <textarea name="comment" class="form-control"></textarea>
+                                    </form>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="card-body m-3">
+                    <div class="row">
+                        <div class="col-lg-1 col-md-3 d-flex justify-content-center align-items-start mb-4 mb-lg-0">
+                            <img src="img/team1.jpg" class="rounded-circle img-fluid shadow-1" alt="User1" />
+                        </div>
+                        <div class="col-lg-11 col-md-9">
+                            <div class="rating-reviews">
+                                <div class="stars">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                </div>
+                            </div>
+                            <p class="fw-bold lead product-description"><strong>John Doe</strong></p>
+                            <p class="text-muted fw-light product-description">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quam sapiente
+                                molestiae numquam quas, voluptates omnis nulla ea odio quia similique
+                                corrupti magnam.
+                            </p>
+                            <p class="product-description d-flex gap-3"><a href="#" class="reply">Reply</a> <a href="#" class="like">Like</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="card-body m-3">
+                    <div class="row">
+                        <div class="col-lg-1 col-md-3 d-flex justify-content-center align-items-start mb-4 mb-lg-0">
+                            <img src="img/team4.jpg" class="rounded-circle img-fluid shadow-1" alt="User1" />
+                        </div>
+                        <div class="col-lg-11 col-md-9">
+                            <div class="rating-reviews">
+                                <div class="stars">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                </div>
+                            </div>
+                            <p class="fw-bold lead product-description"><strong>Juan Dela Cruz</strong></p>
+                            <p class="text-muted fw-light product-description">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quam sapiente
+                                molestiae numquam quas, voluptates omnis nulla ea odio quia similique
+                                corrupti magnam.
+                            </p>
+                            <p class="product-description d-flex gap-3"><a href="#" class="reply">Reply</a> <a href="#" class="like">Like</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
     <!-- RELATED PRODUCTS-->
