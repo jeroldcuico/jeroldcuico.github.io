@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon.ico">
+    <link rel="stylesheet" href="./css/boxicons.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/sidebar.css">
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Hello User! | TimeSpace</title>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg py-3 sticky-top navbar-light bg-white">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img class="logo" src="img/logo.jpg" alt="" />
+                <i class="fa-solid fa-watch-fitness"></i>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- <span class="navbar-toggler-icon"></span> -->
+                <img class="navbar-watch" src="img/watch.svg" alt="Watch" />
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Products</a>
+                        <!-- Making a separate page-->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="row">
+                    <div class="col-auto me-auto">
+                        <div class="dropdown">
+                            <button class="btn btn-primary btn-lg py-3 rounded-0 d-block" type="button"
+                                id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                                My Account
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="dropdownMenuButton2">
+                                <li><a class="dropdown-item" href="login.html">Login</a></li>
+                                <li><a class="dropdown-item" href="register.html">Register</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-auto d-flex align-items-center">
+                        <a class="link link-primary" href="cart.html">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                    </div>
+                </div>
+    </nav>
+    <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center"
+        style="min-height: 600px; background-image: url('./img/userbanner.jpg'); background-size: cover; background-position: center top;">
+        <div class="container">
+            <span class="bg-gradient-default opacity-8"></span>
+            <!-- Banner info usesr container -->
+            <div class="container-fluid d-flex align-items-center">
+                <div class="row">
+                    <div class="col-lg-7 col-md-10">
+                        <h1 class="display-2 text-white">Hello Jerold! </h1>
+                        <p class="text-white mt-0 mb-5">This is your profile page. You can see the progress you've made
+                            with your orders and and shipping status</p>
+                        <a href="#" class="btn btn-primary rounded-0">Edit profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="profile">
+
+    </section>
+
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-lg-3">
+                        <img class="logo" src="img/logo-white.svg" alt="" />
+                    </div>
+                    <div class="col-lg-2">
+                        <h6 class="text-white">Shop Watches</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="shop.html">Products</a></li>
+                            <li><a href="#">Featured Products</a></li>
+                            <li><a href="#">Sale Products</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3">
+                        <h6 class="text-white">Explore</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="faq.html">FAQ's</a></li>
+                            <li><a href="privacy-policy.html">Privacy & Policy</a></li>
+                            <li><a href="terms.html">Terms and Conditions</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4">
+                        <h6 class="text-white">Get Latest News and Offers</h6>
+                        <div class="form-group">
+                            <form action="index.html" class="d-flex gap-1">
+                                <input type="email" required class="form-control form-control-sm"
+                                    placeholder="Email Address">
+                                <button type="button" class="btn btn-sm btn-warning rounded">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom py-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 mb-2">
+                        <p class="mb-0 text-center">© 2023 copyright all right reserved</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="social-icons">
+                            <!-- Facebook -->
+                            <a href="#" role="button"><i class="fab fa-facebook-f"></i></a>
+                            <!-- Twitter -->
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <!-- Instagram -->
+                            <a href="#!"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
