@@ -383,15 +383,6 @@ section {
   background-color: var(--primary);
 }
 
-.pricing i {
-  font-size: 20px;
-  color: var(--primary);
-}
-
-.pricing ul li {
-  margin-top: 8px;
-}
-
 .member img {
   width: 125px;
   height: 125px;
