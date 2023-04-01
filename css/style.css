@@ -376,7 +376,9 @@ section {
   transition: all 0.5s;
   cursor: pointer;
 }
-
+.breadcrumb {
+  font-size: 11px;
+}
 .shopnow:hover {
   text-decoration: none;
   color: white;
