@@ -23,6 +23,7 @@ function RenderAPACBuddy() {
     if (isErrorForm === false) {
         RenderSideSnippet(formId, version);
     }
+    console.log(objectData);
 }
 RenderAPACBuddy();
 
