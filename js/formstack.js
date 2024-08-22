@@ -1,4 +1,30 @@
-const URL_admin = 'https://www.formstack.com/admin'
+const URL_ADMIN = 'https://www.formstack.com/admin'
+const URL_LINK = window.location.href;
+const PATH_IDENTIFIER = /\/forms\/|\/workflows\//gi
+let objectData = {};
+if (PATH_IDENTIFIER.test(URL_LINK)) {
+    const getForms = document.querySelectorAll('.fsBody form');
+    if (getForms) {
+        getForms.forEach(form => {
+            const v3 = form.querySelector('input[name="style_version"]')?.value
+            const v4 = form.querySelector('input[name="formstackFormSchemaVersion"]')?.value
+            const formId = form.querySelector('input[name="form"]').value;
+            objectData = {
+                'version': v3 ?? v4,
+                'formId': formId,
+                'isErrorForm': false
+            }
+        })
+    }
+}
+
+function RenderAPACBuddy() {
+    const { version, formId, isErrorForm } = objectData;
+    if (isErrorForm === false) {
+        RenderSideSnippet(formId, version);
+    }
+}
+RenderAPACBuddy();
 
 const fsAutoFill = (FORM_ID) => {
     const form = window.fsApi().getForm(FORM_ID);
@@ -56,13 +82,9 @@ const fsAutoFill = (FORM_ID) => {
         }
     })
 }
-function fsInfo() {
-    const forms = document.querySelectorAll('.fsForm');
-    forms.forEach(form => {
-        const v3 = form.querySelector('input[name="style_version"]')?.value
-        const v4 = form.querySelector('input[name="formstackFormSchemaVersion"]')?.value
-        const formId = form.querySelector('input[name="form"]').value;
-        const dataHTMl = `
+
+function RenderSideSnippet(formId, version) {
+    const dataHTML = `
         <div id="sidenav">
                 <a class="btn btn-success m-0 p-1" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
                     aria-controls="offcanvasExample"> <img
@@ -85,7 +107,7 @@ function fsInfo() {
                     </span>
                     </div>                
                     <hr>
-                    <span class="badge rounded-pill text-bg-danger mb-2">Version: ${v3 ?? v4}</span>
+                    <span class="badge rounded-pill text-bg-danger mb-2">Version: ${version}</span>
                     <hr>
                     <button type="button" class="fw-bold btn btn-sm btn-warning" id="autofill">AutoFill form for testing</button>
                     <div class="d-flex justify-content-between align-items-center fs-7 fw-bold">
@@ -98,9 +120,7 @@ function fsInfo() {
                 </div>
         </div>
         `
-        document.querySelector('.fsform-container')
-            .insertAdjacentHTML('beforebegin', `<div id="apac" class="m-0 p-0 position-absolute top-50 start-0" style="z-index:9999;">${dataHTMl}</div>`);
-        document.getElementById('autofill').addEventListener('click', () => fsAutoFill(formId));
-    })
+    document.querySelector('.fsform-container')
+        .insertAdjacentHTML('beforebegin', `<div id="apac" class="m-0 p-0 position-absolute top-50 start-0" style="z-index:9999;">${dataHTML}</div>`);
+    document.getElementById('autofill').addEventListener('click', () => fsAutoFill(formId));
 }
-fsInfo()
