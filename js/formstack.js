@@ -103,7 +103,7 @@ function RenderSideSnippet(formId, version) {
                     <hr>
                     <div><span class="badge rounded-pill text-bg-warning mb-2">Builder:</span>
                     <span style="font-size:0.75rem;"><a class="text-wrap text-break" target="_blank"
-                            href="${URL_admin}/form/builder/${formId}/build">${URL_admin}/form/builder/${formId}/build</a>
+                            href="${URL_ADMIN}/form/builder/${formId}/build">${URL_ADMIN}/form/builder/${formId}/build</a>
                     </span>
                     </div>                
                     <hr>
