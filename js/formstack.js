@@ -125,3 +125,26 @@ function RenderSideSnippet(formId, version) {
         .insertAdjacentHTML('beforebegin', `<div id="apac" class="m-0 p-0 position-absolute top-50 start-0" style="z-index:9999;">${dataHTML}</div>`);
     document.getElementById('autofill').addEventListener('click', () => fsAutoFill(formId));
 }
+
+function fsEmbedForm() {
+    const elements = [
+        ...document.querySelectorAll('script[src*="js.php"]'),
+        ...document.querySelectorAll('iframe[src*="formstack.com"]')
+    ];
+    elements.forEach(({ tagName, src }) => {
+        objectData[tagName.toLowerCase()] = src;
+    });
+
+    const badgeClass = 'iframe' in objectData ? 'bg-info' : 'bg-success';
+    const urlValue = [objectData.IFRAME, objectData.SCRIPT]
+        .filter(Boolean)
+        .map(url => `<li class="list-group-item"><span class="badge ${badgeClass}">${url}</span></li>`)
+        .join('');
+
+    console.log(`
+        <ul class="list-group">
+            ${urlValue}
+        </ul>
+    `)
+}
+fsEmbedForm()
