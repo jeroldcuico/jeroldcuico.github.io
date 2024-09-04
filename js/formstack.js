@@ -121,8 +121,15 @@ function RenderSideSnippet(formId, version) {
                 </div>
         </div>
         `
-    document.querySelector('.fsform-container')
-        .insertAdjacentHTML('beforebegin', `<div id="apac" class="m-0 p-0 position-absolute top-50 start-0" style="z-index:9999;">${dataHTML}</div>`);
+    const pureform = document.querySelector('.fsform-container');
+    const workflow = document.querySelector('.fsForm');
+    const htmlsnippet = `<div id="apac" class="m-0 p-0 position-absolute top-50 start-0" style="z-index:9999;">${dataHTML}</div>`;
+    if(pureform){
+        pureform.insertAdjacentHTML('beforebegin', htmlsnippet );
+    }
+    if(workflow){
+        workflow.insertAdjacentHTML('beforebegin', htmlsnippet );
+    }
     document.getElementById('autofill').addEventListener('click', () => fsAutoFill(formId));
 }
 
