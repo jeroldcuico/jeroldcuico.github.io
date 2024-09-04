@@ -3,10 +3,10 @@ const URL_LINK = window.location.href;
 const PATH_IDENTIFIER = /\/forms\/|\/workflows\//gi
 let objectData = {};
 if (PATH_IDENTIFIER.test(URL_LINK)) {
-    const getForm = document.querySelectorAll('form');
+    const getForm = document.querySelector('form');
     if (getForm) {
-            const v3 = getForm.querySelector('input[name="style_version"]').value
-            const v4 = getForm.querySelector('input[name="formstackFormSchemaVersion"]').value
+            const v3 = getForm.querySelector('input[name="style_version"]')?.value
+            const v4 = getForm.querySelector('input[name="formstackFormSchemaVersion"]')?.value
             const formId = getForm.querySelector('input[name="form"]').value;
             objectData = {
                 'version': v3 ?? v4,
