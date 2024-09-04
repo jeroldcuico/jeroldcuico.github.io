@@ -3,7 +3,7 @@ const URL_LINK = window.location.href;
 const PATH_IDENTIFIER = /\/forms\/|\/workflows\//gi
 let objectData = {};
 if (PATH_IDENTIFIER.test(URL_LINK)) {
-    const getForms = document.querySelectorAll('.fsBody form');
+    const getForms = document.querySelectorAll('form');
     if (getForms) {
         getForms.forEach(form => {
             const v3 = form.querySelector('input[name="style_version"]')?.value
