@@ -8,7 +8,7 @@ if (PATH_IDENTIFIER.test(URL_LINK)) {
         getForms.forEach(form => {
             const v3 = form.querySelector('input[name="style_version"]')?.value
             const v4 = form.querySelector('input[name="formstackFormSchemaVersion"]')?.value
-            const formId = form.querySelector('input[name="form"]').value;
+            const formId = form.querySelector('input[name="form"]')?.value;
             objectData = {
                 'version': v3 ?? v4,
                 'formId': formId,
