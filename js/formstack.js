@@ -128,7 +128,10 @@ function RenderSideSnippet(formId, version) {
     if(workflow){
         workflow.insertAdjacentHTML('beforebegin', htmlsnippet );
     }
-    document.getElementById('autofill').addEventListener('click', () => fsAutoFill(formId));
+    const autofill = document.getElementById('autofill');
+    if(autofill){
+        autofill.addEventListener('click', () => fsAutoFill(formId));
+    }
 }
 
 function fsEmbedForm() {
