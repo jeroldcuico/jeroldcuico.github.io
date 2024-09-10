@@ -3,7 +3,9 @@ const URL_LINK = window.location.href;
 const HAS_INDEX = /\/forms\/index.php/gi
 const PATH_IDENTIFIER = /\/forms\/|\/workflows\//gi
 let objectData = {};
-if(HAS_INDEX.test(URL_LINK)) return;
+if(HAS_INDEX.test(URL_LINK) === true){
+    console.log('Has index.php')
+}
 else{
     if (PATH_IDENTIFIER.test(URL_LINK)) {
         const getForm = document.querySelector('form');
