@@ -1,7 +1,9 @@
 const URL_ADMIN = 'https://www.formstack.com/admin'
 const URL_LINK = window.location.href;
+const HAS_INDEX = /\/forms\/index.php/gi
 const PATH_IDENTIFIER = /\/forms\/|\/workflows\//gi
 let objectData = {};
+if(HAS_INDEX.test(URL_LINK) === false) return;
 if (PATH_IDENTIFIER.test(URL_LINK)) {
     const getForm = document.querySelector('form');
     if (getForm) {
