@@ -1,23 +1,21 @@
 const URL_ADMIN = 'https://www.formstack.com/admin'
-const URL_LINK = window.location.href;
-const HAS_INDEX = /\/forms\/index.php/gi
-const PATH_IDENTIFIER = /\/forms\/|\/workflows\//gi
-let objectData = {};
-if(HAS_INDEX.test(URL_LINK) === true){
-    console.log('Has index.php')
+function isFormstackForms() {
+    const url = window.location.href;
+    const regex = /\.formstack\.com\/(forms|workflows)/i;
+    const hasIndexPhp = /index\.php/i;
+    return regex.test(url) && !hasIndexPhp.test(url);
 }
-else{
-    if (PATH_IDENTIFIER.test(URL_LINK)) {
-        const getForm = document.querySelector('form');
-        if (getForm) {
-                const v3 = getForm.querySelector('input[name="style_version"]')?.value
-                const v4 = getForm.querySelector('input[name="formstackFormSchemaVersion"]')?.value
-                const formId = getForm.querySelector('input[name="form"]').value;
-                objectData = {
-                    'version': v3 ?? v4,
-                    'formId': formId,
-                    'isErrorForm': false
-                }
+let objectData = {};
+if (isFormstackForms()) {
+    const getForm = document.querySelector('.fsBody form');
+    if (getForm) {
+        const v3 = getForm.querySelector('input[name="style_version"]')?.value
+        const v4 = getForm.querySelector('input[name="formstackFormSchemaVersion"]')?.value
+        const formId = getForm.querySelector('input[name="form"]')?.value;
+        objectData = {
+            'version': v3 ?? v4,
+            'formId': formId,
+            'isErrorForm': false
         }
     }
 }
@@ -31,8 +29,22 @@ function RenderAPACBuddy() {
 }
 RenderAPACBuddy();
 
+function validateEmail(email) {
+    return email === "" ? "Email field is required" :
+        !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email) ? "Invalid email address" :
+            true;
+}
 const fsAutoFill = (FORM_ID) => {
     const form = window.fsApi().getForm(FORM_ID);
+    const emailField = document.getElementById('apac-email')
+    const emailValue = emailField.value;
+    const validationResult = validateEmail(emailValue);
+    if (validationResult !== true) {
+        alert(validationResult);
+        emailField.focus();
+        return false;
+    }
+
     form.getFields().forEach(field => {
         const type = field.getGeneralAttribute('type'); //Get the type of each field                                           
         const hidden = field.getGeneralAttribute('hidden'); //Get the hidden of each field      
@@ -50,12 +62,17 @@ const fsAutoFill = (FORM_ID) => {
             })
         }
         /* Randomized Select Dropdown */
-        const dropdownOption = className => document.querySelectorAll(className).forEach(dropdown => dropdown.selectedIndex = Math.floor(Math.random() * dropdown.options.length));
+        const dropdownOption = fieldId => {
+            const dropdown = document.getElementById(fieldId)
+            let selectedIndex = Math.floor(Math.random() * dropdown.options.length)
+            let selectedOption = dropdown.options[selectedIndex];
+            fieldValue.setValue({ value: selectedOption.value });
+        }
 
         if (hidden) return;
         switch (type) {
             case 'email':
-                fieldValue.setValue({ value: 'email@formstack.com' });
+                fieldValue.setValue({ value: email });
                 break;
             case 'text':
                 fieldValue.setValue({ value: 'TestSupport' });
@@ -70,7 +87,7 @@ const fsAutoFill = (FORM_ID) => {
                 autoSelectOption('input[type="checkbox"]')
                 break;
             case 'select':
-                dropdownOption('.fsFieldSelect')
+                dropdownOption(`field${id}`)
                 break;
             case 'address':
                 fieldValue.setValue({ address: 'TestAddress1', address2: 'TestAddress2', city: 'TestCity', country: 'United States', state: 'FL', zip: '12345' });
@@ -87,7 +104,6 @@ const fsAutoFill = (FORM_ID) => {
         }
     })
 }
-
 function RenderSideSnippet(formId, version) {
     const dataHTML = `
         <div id="sidenav">
