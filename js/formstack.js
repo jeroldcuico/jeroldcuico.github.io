@@ -113,7 +113,7 @@ function RenderSideSnippet(formId, version) {
                 </a>
         </div>
         <div class="offcanvas offcanvas-end border border-success rounded" tabindex="-1" id="offcanvasExample"
-            aria-labelledby="offcanvasExampleLabel" style="width:24%; height:65%;">
+            aria-labelledby="offcanvasExampleLabel" style="height:65%;">
                 <div class="offcanvas-header">
                     <h6 class="offcanvas-title" id="offcanvasExampleLabel">Formstack Form Information 🥰</h6>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -122,15 +122,19 @@ function RenderSideSnippet(formId, version) {
                     <span class="badge rounded-pill text-bg-primary">Form ID:</span>
                     <span class="fs-5 formId">${formId}</span>
                     <hr>
-                    <div><span class="badge rounded-pill text-bg-warning mb-2">Builder:</span>
-                    <span style="font-size:0.75rem;"><a class="text-wrap text-break" target="_blank"
-                            href="${URL_ADMIN}/form/builder/${formId}/build">${URL_ADMIN}/form/builder/${formId}/build</a>
-                    </span>
+                    <div>
+                        <span class="badge rounded-pill text-bg-warning mb-2">Builder:</span>
+                        <span style="font-size:0.75rem;"><a class="text-wrap text-break" target="_blank"
+                                href="${admin}/form/builder/${formId}/build">Click here to go Builder</a>
+                        </span>
                     </div>                
-                    <hr>
-                    <span class="badge rounded-pill text-bg-danger mb-2">Version: ${version}</span>
-                    <hr>
+                    <div><span class="badge rounded-pill text-bg-danger mb-2">Version: ${version}</span></div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control form-control-sm" id="apac-email" placeholder="name@formstack.com">
+                        <label for="apac-email">Email address</label>
+                    </div>             
                     <button type="button" class="fw-bold btn btn-sm btn-warning" id="autofill">AutoFill form for testing</button>
+                    <hr>
                     <div class="d-flex justify-content-between align-items-center fs-7 fw-bold">
                     <div style="font-size:0.75rem;">Show some tacos with love</div>
                         <div>
