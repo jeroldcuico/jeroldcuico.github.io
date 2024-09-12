@@ -70,7 +70,7 @@ const fsAutoFill = (FORM_ID) => {
                     alert(validationResult);
                     emailField.focus();
                 }
-                fieldValue.setValue({ value: email });
+                fieldValue.setValue({ value: emailValue });
                 break;
             case 'text':
                 fieldValue.setValue({ value: 'TestSupport' });
