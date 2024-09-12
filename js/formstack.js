@@ -38,13 +38,6 @@ const fsAutoFill = (FORM_ID) => {
     const form = window.fsApi().getForm(FORM_ID);
     const emailField = document.getElementById('apac-email')
     const emailValue = emailField.value;
-    const validationResult = validateEmail(emailValue);
-    if (validationResult !== true) {
-        alert(validationResult);
-        emailField.focus();
-        return false;
-    }
-
     form.getFields().forEach(field => {
         const type = field.getGeneralAttribute('type'); //Get the type of each field                                           
         const hidden = field.getGeneralAttribute('hidden'); //Get the hidden of each field      
@@ -72,6 +65,12 @@ const fsAutoFill = (FORM_ID) => {
         if (hidden) return;
         switch (type) {
             case 'email':
+                const validationResult = validateEmail(emailValue);
+                if (validationResult !== true) {
+                    alert(validationResult);
+                    emailField.focus();
+                    return false;
+                }
                 fieldValue.setValue({ value: email });
                 break;
             case 'text':
