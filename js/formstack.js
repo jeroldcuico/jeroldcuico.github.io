@@ -69,7 +69,6 @@ const fsAutoFill = (FORM_ID) => {
                 if (validationResult !== true) {
                     alert(validationResult);
                     emailField.focus();
-                    return false;
                 }
                 fieldValue.setValue({ value: email });
                 break;
