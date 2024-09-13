@@ -30,9 +30,7 @@ function RenderAPACBuddy() {
 RenderAPACBuddy();
 
 function validateEmail(email) {
-    return email === "" ? "Email field is required" :
-        !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email) ? "Invalid email address" :
-            true;
+    return email === "" ? "Email field is required" : true;
 }
 const fsAutoFill = (FORM_ID) => {
     const form = window.fsApi().getForm(FORM_ID);
@@ -65,11 +63,7 @@ const fsAutoFill = (FORM_ID) => {
         if (hidden) return;
         switch (type) {
             case 'email':
-                const validationResult = validateEmail(emailValue);
-                if (validationResult !== true) {
-                    alert(validationResult);
-                    emailField.focus();
-                }
+                emailField.focus();
                 fieldValue.setValue({ value: emailValue });
                 break;
             case 'text':
