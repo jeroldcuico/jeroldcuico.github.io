@@ -34,13 +34,15 @@ if (isFormstackForms()) {
             objectData.isErrorForm = true
         }
     }
-}
-/* Render Area */
-const { version, formId, isErrorForm } = objectData;
-if (isErrorForm === false) {
-    RenderSideSnippet(formId, version, isErrorForm);
-} else {
-    RenderSideSnippet(formId, version, isErrorForm);
+
+    /* Render Area */
+    const { version, formId, isErrorForm } = objectData;
+    if (isErrorForm === false) {
+        RenderSideSnippet(formId, version, isErrorForm);
+    } else {
+        RenderSideSnippet(formId, version, isErrorForm);
+    }
+
 }
 
 export function fsEmbedForm() {
