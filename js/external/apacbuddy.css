@@ -1,6 +1,3 @@
 button, input, optgroup, select, textarea {
-    margin: unset !important;
-    font-family: unset !important;
-    font-size: unset !important;
-    line-height: unset !important;
+    line-height: revert ;
 }
