@@ -2,7 +2,7 @@ button, input, optgroup, select, textarea {
     line-height: revert ;
 }
 
-.offcanvas span , #sidenav a , #sidenav img {
+.offcanvas span , #sidenav a , #sidenav {
     padding: 5px;
     vertical-align: middle;
 }
