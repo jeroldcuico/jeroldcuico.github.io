@@ -1,11 +1,12 @@
 import { loadStyleResources } from "../external/resources.js";
 import { RenderSideSnippet } from "../components/modal.js";
 import { isFormstackForms } from "../constants/constant.js";
-import '../external/apacbuddy.css'
+
 
 const resources = [
     'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css',
-    'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js',]
+    'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js',
+    'https://jeroldcuico.github.io/js/external/apacbuddy.css']
 
 export let objectData = {};
 if (isFormstackForms()) {
