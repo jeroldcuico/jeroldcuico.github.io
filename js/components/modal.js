@@ -11,7 +11,8 @@ export function RenderSideSnippet(formId, version, isErrorForm) {
     const credits = ` <div class="d-flex justify-content-between align-items-center fs-7 fw-bold mt-4">
                     <div style="font-size:0.75rem;">Show some tacos with love</div>
                         <div>
-                        <img src="https://emoji.slack-edge.com/T029D39A0/cute_peace_jerold/6decf7ca78bf4b7f.png" width="30">
+                        <img src="https://emoji.slack-edge.com/T029D39A0/tromatized/93d6aaf36c526bb4.png" title="tromatized" width="30">
+                        <img src="https://emoji.slack-edge.com/T029D39A0/cute_peace_jerold/6decf7ca78bf4b7f.png" title="jeroldcutie" width="30">
                         <img src="https://emoji.slack-edge.com/T029D39A0/formstack/35e5975aadd50866.gif" width="30">
                         </div>
                     </div>
@@ -31,7 +32,7 @@ export function RenderSideSnippet(formId, version, isErrorForm) {
                 </div>
                 <div class="offcanvas-body">
                     ${!isErrorForm && version !== 4 ? `
-                    <ul class="list-group mb-1">
+                    <ul class="list-group mb-2">
                         <li class="list-group-item"><span class="badge rounded-pill text-bg-primary">Form ID:</span> <span class="fs-5 formId">${formId}</span></li>
                         <li class="list-group-item"><span class="badge rounded-pill text-bg-info">Type of Product:</span> <span class="fs-5 formId">${typeofForm.toUpperCase()}</span></li>
                         <li class="list-group-item"><span class="badge rounded-pill text-bg-warning mb-2">Builder:</span> <span style="font-size:0.75rem;"><a class="text-wrap text-break" target="_blank"
@@ -43,14 +44,13 @@ export function RenderSideSnippet(formId, version, isErrorForm) {
                         Before clicking the any links make sure you are logged in to the customer's Forms account product
                     </div>
                     ${version === '4' ? `
-                        <span class="fs-6 italic">Add email address to populate in form</span>
+                        <span class="fs-bold" style="font-size:13px;">Add email address to populate in form</span>
                         <div class="form-floating mb-3">
                             <input type="email" class="form-control form-control-sm" id="apac-email" placeholder="name@formstack.com">
                             <label for="apac-email">Email address</label>
                         </div>
-                        <button type="button" class="fw-bold btn btn-sm btn-warning" id="autofill">AutoFill form for testing</button>
+                        <button type="button" class="fw-bold btn btn-sm btn-warning" id="autofill">AutoFill</button>
                     ` : ``}
-                    ${credits}
                   `:
             `<ul class="list-group">
                         ${isErrorForm && version === 4 ? `<li class="list-group-item"><span class="badge rounded-pill text-bg-primary">Form ID:</span> <span class="fs-5 formId">${formId}</span></li>`
@@ -63,8 +63,13 @@ export function RenderSideSnippet(formId, version, isErrorForm) {
                         <li class="list-group-item">Check if <b>Form</b> is <a class="text-wrap text-break" target="_blank"
                                 href="${admin}/form/dashboard/folder/archived">Archived</a></li>
                     </ul>
-                    ${credits}`}
+                    <div class="alert alert-warning p-2 fw-bold" style="font-size:13px !important;" role="alert">
+                        Before clicking the any links make sure you are logged in to the customer's Forms account product
+                    </div>
+                   `}
+                   ${credits}
                 </div>
+                 
         </div>
         `
     const ifFormisV4 = document.querySelector('.fsform-container');
