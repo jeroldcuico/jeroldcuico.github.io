@@ -31,7 +31,7 @@ export function RenderSideSnippet(formId, version, isErrorForm) {
                 </div>
                 <div class="offcanvas-body">
                     ${!isErrorForm && version !== 4 ? `
-                    <ul class="list-group mb-2">
+                    <ul class="list-group mb-1">
                         <li class="list-group-item"><span class="badge rounded-pill text-bg-primary">Form ID:</span> <span class="fs-5 formId">${formId}</span></li>
                         <li class="list-group-item"><span class="badge rounded-pill text-bg-info">Type of Product:</span> <span class="fs-5 formId">${typeofForm.toUpperCase()}</span></li>
                         <li class="list-group-item"><span class="badge rounded-pill text-bg-warning mb-2">Builder:</span> <span style="font-size:0.75rem;"><a class="text-wrap text-break" target="_blank"
