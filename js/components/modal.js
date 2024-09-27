@@ -31,7 +31,7 @@ export function RenderSideSnippet(formId, version, isErrorForm) {
                 </div>
                 <div class="offcanvas-body">
                     ${!isErrorForm && version !== 4 ? `
-                    <ul class="list-group">
+                    <ul class="list-group mb-2">
                         <li class="list-group-item"><span class="badge rounded-pill text-bg-primary">Form ID:</span> <span class="fs-5 formId">${formId}</span></li>
                         <li class="list-group-item"><span class="badge rounded-pill text-bg-info">Type of Product:</span> <span class="fs-5 formId">${typeofForm.toUpperCase()}</span></li>
                         <li class="list-group-item"><span class="badge rounded-pill text-bg-warning mb-2">Builder:</span> <span style="font-size:0.75rem;"><a class="text-wrap text-break" target="_blank"
@@ -39,6 +39,9 @@ export function RenderSideSnippet(formId, version, isErrorForm) {
                         </span></li>
                         <li class="list-group-item"><span class="badge rounded-pill text-bg-danger px-2 fs-6">Version: ${version}</span></li>
                     </ul>    
+                    <div class="alert alert-warning p-2" role="alert">
+                        Before clicking the any links make sure you are logged in to the customer's Forms account product
+                    </div>
                     ${version === '4' ? `
                         <hr>       
                         <span class="fs-6 italic">Add email address to populate in form</span>
