@@ -5,7 +5,6 @@ import { fsAutoFill } from "./autofill.js";
 export function RenderSideSnippet(formId, version, isErrorForm) {
     const admin = URL_ADMIN;
     const typeofForm = location.pathname.split('/')[1];
-    console.log(objectData);
     const embed = fsEmbedForm().filter(Boolean)
         .map(url => `<li class="list-group-item"><span class="badge">${url}</span></li>`)
         .join('');
@@ -21,12 +20,12 @@ export function RenderSideSnippet(formId, version, isErrorForm) {
         <div id="sidenav">
                 <a class="btn btn-success m-0 p-1" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
                     aria-controls="offcanvasExample"> <img
-                        src="https://emoji.slack-edge.com/T029D39A0/formstack/35e5975aadd50866.gif" width="30" alt="logo">
+                        src="https://emoji.slack-edge.com/T029D39A0/formstack/35e5975aadd50866.gif" width="30" alt="logo" class="sidenavlogo" id="sidenavlogo">
                 </a>
         </div>
        <div class="offcanvas offcanvas-end border border-success rounded" tabindex="-1" id="offcanvasExample"
             aria-labelledby="offcanvasExampleLabel" style="max-height:60vh;">
-                <div class="offcanvas-header">
+                <div class="offcanvas-header bg-success bg-gradient text-white">
                     <h6 class="offcanvas-title" id="offcanvasExampleLabel">Formstack Form Information 🥰</h6>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
@@ -38,7 +37,7 @@ export function RenderSideSnippet(formId, version, isErrorForm) {
                         <li class="list-group-item"><span class="badge rounded-pill text-bg-warning mb-2">Builder:</span> <span style="font-size:0.75rem;"><a class="text-wrap text-break" target="_blank"
                                 href="${admin}/form/builder/${formId}/build">Builder</a>
                         </span></li>
-                        <li class="list-group-item"><span class="badge rounded-pill text-bg-danger mb-2">Version: ${version}</span></li>
+                        <li class="list-group-item"><span class="badge rounded-pill text-bg-danger px-2 fs-6">Version: ${version}</span></li>
                     </ul>    
                     ${version === '4' ? `
                         <hr>       
@@ -75,10 +74,10 @@ export function RenderSideSnippet(formId, version, isErrorForm) {
             document.getElementById('autofill').addEventListener('click', () => fsAutoFill(formId));
         }
     }
-    if (ifFormisV3) {
+    if (ifFormisV3 && version === '3') {
         ifFormisV3.insertAdjacentHTML('beforebegin', htmlsnippet);
     }
-    if (isErrorForm && version === 3) {
+    if (isErrorForm && version === '3') {
         if (document.getElementById('error')) {
             document.getElementById('error').insertAdjacentHTML('beforebegin', htmlsnippet);
         }
