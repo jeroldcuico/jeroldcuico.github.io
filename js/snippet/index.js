@@ -2,49 +2,58 @@ import { loadStyleResources } from "../external/resources.js";
 import { RenderSideSnippet } from "../components/modal.js";
 import { isFormstackForms } from "../constants/constant.js";
 
-
 const resources = [
     'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css',
     'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js',
-    'https://jeroldcuico.github.io/js/external/apacbuddy.css']
+    'http://127.0.0.1:5500/APACBuddy/external/apacbuddy.css',
+    'https://code.jquery.com/jquery-3.7.1.js',
+    'https://code.jquery.com/ui/1.14.0/jquery-ui.js'
+]
 
-export let objectData = {};
+export let objectData = {};// Load all resources
 if (isFormstackForms()) {
-    resources.forEach(e => loadStyleResources(e))
-    const getForm = document.querySelector('.fsBody form');
-    if (getForm) {
-        const v3 = getForm.querySelector('input[name="style_version"]')?.value
-        const v4 = getForm.querySelector('input[name="formstackFormSchemaVersion"]')?.value
-        const formId = getForm.querySelector('input[name="form"]')?.value;
-        objectData = {
-            'version': v3 ?? v4,
-            'formId': formId,
-            'isErrorForm': false
-        }
-    } else {
-        //If this is an error page like if Forms is disable hosting etc.
-        if (document.querySelector('.fsform-container')) {
-            const errorForm = document.querySelector('.fsform-container').getAttribute('data-formid')
-            objectData = {
-                'formId': errorForm,
-                'version': 4,
-                'isErrorForm': true
-            }
-        } else {
-            objectData.formId = '00000' //Cant get the formId in error V3
-            objectData.version = 3
-            objectData.isErrorForm = true
-        }
-    }
+    resources.forEach(loadStyleResources);
 
-    /* Render Area */
-    const { version, formId, isErrorForm } = objectData;
-    if (isErrorForm === false) {
-        RenderSideSnippet(formId, version, isErrorForm);
-    } else {
-        RenderSideSnippet(formId, version, isErrorForm);
-    }
+    // Poll until jQuery is available
+    const checkForjQuery = setInterval(() => {
+        if (typeof $ !== 'undefined') {
+            clearInterval(checkForjQuery); // Stop polling when jQuery is available
+            $(document).ready(function () {
+                const getForm = document.querySelector('.fsBody form');
+                if (getForm) {
+                    const v3 = getForm.querySelector('input[name="style_version"]')?.value;
+                    const v4 = getForm.querySelector('input[name="formstackFormSchemaVersion"]')?.value;
+                    const formId = getForm.querySelector('input[name="form"]')?.value;
+                    objectData = {
+                        'version': v3 ?? v4,
+                        'formId': formId,
+                        'isErrorForm': false
+                    };
+                } else {
+                    const errorForm = document.querySelector('.fsform-container')?.getAttribute('data-formid');
+                    objectData = {
+                        'formId': errorForm || '00000',
+                        'version': errorForm ? 4 : 3,
+                        'isErrorForm': true
+                    };
+                }
 
+                //Draggable
+
+                $(function () {
+                    $("#sidenav").draggable();
+                    $("#offcanvasExample").draggable({
+                        cancel: ".offcanvas-body",
+                        cursor: "crosshair"
+                    });
+                });
+
+                /* Render Area */
+                const { version, formId, isErrorForm } = objectData;
+                RenderSideSnippet(formId, version, isErrorForm);
+            });
+        }
+    }, 100); // Check every 100ms until jQuery is loaded
 }
 
 export function fsEmbedForm() {
