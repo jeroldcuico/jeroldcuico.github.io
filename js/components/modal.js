@@ -39,7 +39,7 @@ export function RenderSideSnippet(formId, version, isErrorForm) {
                         </span></li>
                         <li class="list-group-item"><span class="badge rounded-pill text-bg-danger px-2 fs-6">Version: ${version}</span></li>
                     </ul>    
-                    <div class="alert alert-warning p-2" role="alert">
+                    <div class="alert alert-warning p-2 fw-bold" style="font-size:14px;" role="alert">
                         Before clicking the any links make sure you are logged in to the customer's Forms account product
                     </div>
                     ${version === '4' ? `
