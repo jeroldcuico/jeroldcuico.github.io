@@ -84,7 +84,7 @@ export function RenderSideSnippet(formId, version, isErrorForm) {
     if (ifFormisV3 && version === '3') {
         ifFormisV3.insertAdjacentHTML('beforebegin', htmlsnippet);
     }
-    if (isErrorForm && version === '3') {
+    if (isErrorForm && version === 3) {
         if (document.getElementById('error')) {
             document.getElementById('error').insertAdjacentHTML('beforebegin', htmlsnippet);
         }
