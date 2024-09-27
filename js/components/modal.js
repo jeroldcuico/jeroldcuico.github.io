@@ -43,7 +43,6 @@ export function RenderSideSnippet(formId, version, isErrorForm) {
                         Before clicking the any links make sure you are logged in to the customer's Forms account product
                     </div>
                     ${version === '4' ? `
-                        <hr>       
                         <span class="fs-6 italic">Add email address to populate in form</span>
                         <div class="form-floating mb-3">
                             <input type="email" class="form-control form-control-sm" id="apac-email" placeholder="name@formstack.com">
