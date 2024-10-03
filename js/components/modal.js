@@ -52,7 +52,7 @@ export function RenderSideSnippet(formId, version, isErrorForm) {
                         <button type="button" class="fw-bold btn btn-sm btn-warning" id="autofill">AutoFill</button>
                     ` : ``}
                   `:
-            `<ul class="list-group">
+            `<ul class="list-group mb-2">
                         ${isErrorForm && version === 4 ? `<li class="list-group-item"><span class="badge rounded-pill text-bg-primary">Form ID:</span> <span class="fs-5 formId">${formId}</span></li>`
                 :
                 `<li class="list-group-item">This is a Deactivated ${typeofForm === 'workflows' ? `Version 3 or 4 Workflows Form` : `Version 3 Form`}. </li>`}
