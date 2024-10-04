@@ -1,20 +1,20 @@
 {
     "users": [
         {
-            label: "Jerold Cuico",
-            value: "jerold.cuico@formstack.com"
+            "label": "Jerold Cuico",
+            "value": "jerold.cuico@formstack.com"
         },
         {
-            label: "Arthur Tapang",
-            value: "arthur.tapang@formstack.com"
+            "label": "Arthur Tapang",
+            "value": "arthur.tapang@formstack.com"
         },
         {
-            label: "Ryan Edioma",
-            value: "ryan.edioma@formstack.com"
+            "label": "Ryan Edioma",
+            "value": "ryan.edioma@formstack.com"
         },
         {
-            label: "John Paul Mag asin",
-            value: "johnpaul.magasin@formstack.com"
+            "label": "John Paul Mag asin",
+            "value": "johnpaul.magasin@formstack.com"
         }
     ]
 }
