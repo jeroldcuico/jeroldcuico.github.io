@@ -71,7 +71,7 @@ export function RenderSideSnippet(formId, version, isErrorForm) {
                                 href="${admin}/form/dashboard/folder/archived">Archived</a></li>
                     </ul>
                     <div class="alert alert-warning p-2 fw-bold" style="font-size:13px !important;" role="alert">
-                        Before clicking the any links make sure you are logged in to the customer's Forms account product
+                        Before clicking any links make sure you are logged in to the customer's Forms account product
                     </div>
                    `}
                    ${credits}
