@@ -18,7 +18,6 @@ export function RenderSideSnippet(formId, version, isErrorForm) {
                     </div>
                     </div>`
     const dataHTML = `
-        
         <div id="sidenav">
                 <a class="btn btn-success m-0 p-1" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
                     aria-controls="offcanvasExample"> <img
@@ -26,7 +25,7 @@ export function RenderSideSnippet(formId, version, isErrorForm) {
                 </a>
         </div>
        <div class="offcanvas offcanvas-end border border-success rounded" tabindex="-1" id="offcanvasExample"
-            aria-labelledby="offcanvasExampleLabel" style="max-height:70vh;">
+            aria-labelledby="offcanvasExampleLabel" style="max-height:60vh;">
                 <div class="offcanvas-header bg-success bg-gradient text-white">
                     <h6 class="offcanvas-title" id="offcanvasExampleLabel">Formstack Form Information 🥰</h6>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -36,16 +35,24 @@ export function RenderSideSnippet(formId, version, isErrorForm) {
                     <ul class="list-group mb-2">
                         <li class="list-group-item"><span class="badge rounded-pill text-bg-primary">Form ID:</span> <span class="fs-5 formId">${formId}</span></li>
                         <li class="list-group-item"><span class="badge rounded-pill text-bg-info">Type of Product:</span> <span class="fs-5 formId">${typeofForm.toUpperCase()}</span></li>
-                        <li class="list-group-item"><span class="badge rounded-pill text-bg-warning mb-2">Builder:</span> <span style="font-size:0.75rem;"><a class="text-wrap text-break" target="_blank"
-                                href="${admin}/form/builder/${formId}/build">Builder</a>
-                        </span></li>
-                        <li class="list-group-item"><span class="badge rounded-pill text-bg-dark mb-2">Settings:</span> <span style="font-size:0.75rem;"><a class="text-wrap text-break" target="_blank"
-                                href="${admin}/form/settings/${formId}/general">Check Settings</a>
-                        </span></li>
-                        <li class="list-group-item"><span class="badge rounded-pill text-bg-info mb-2">Submissions:</span> <span style="font-size:0.75rem;"><a class="text-wrap text-break" target="_blank"
-                                href="${admin}/submission/${formId}">View Submissions</a>
-                        </span></li>
-                        <li class="list-group-item"><span class="badge rounded-pill text-bg-danger px-2 fs-6">Version: ${version}</span></li>
+                        <li class="list-group-item"><span class="badge rounded-pill text-bg-danger px-2">Version: ${version}</span></li>
+                        <li class="list-group-item">
+                            <div class="d-flex  justify-content-evenly ">
+                                <div class="d-flex align-items-center ">
+                                    <i class="bx bxs-buildings bx-tada bx-sm"></i> 
+                                    <span style="font-size:0.75rem;"><a class="text-wrap text-break" target="_blank" href="${admin}/form/builder/${formId}/build">Builder</a></span>
+                                </div>
+                                <div class="d-flex align-items-center ">
+                                    <i class="bx bxs-cog bx-spin bx-sm"></i>
+                                    <span style="font-size:0.75rem;"><a class="text-wrap text-break" target="_blank" href="${admin}/form/settings/${formId}/general">Settings</a></span>
+                                </div>
+                                
+                                <div class="d-flex align-items-center ">
+                                    <i class="bx bxs-note bx-flashing bx-sm"></i>
+                                    <span style="font-size:0.75rem;"><a class="text-wrap text-break" target="_blank"href="${admin}/submission/${formId}">Submissions</a> </span>
+                                </div>
+                            </div>
+                        </li>                        
                     </ul>    
                     <div class="alert alert-warning p-2 fw-bold" style="font-size:13px !important;" role="alert">
                         Before clicking the any links make sure you are logged in to the customer's Forms account product
@@ -71,12 +78,11 @@ export function RenderSideSnippet(formId, version, isErrorForm) {
                                 href="${admin}/form/dashboard/folder/archived">Archived</a></li>
                     </ul>
                     <div class="alert alert-warning p-2 fw-bold" style="font-size:13px !important;" role="alert">
-                        Before clicking any links make sure you are logged in to the customer's Forms account product
+                        Before clicking the any links make sure you are logged in to the customer's Forms account product
                     </div>
                    `}
                    ${credits}
-                </div>
-                 
+                </div>   
         </div>
         `
     const ifFormisV4 = document.querySelector('.fsform-container');
