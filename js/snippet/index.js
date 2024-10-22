@@ -7,7 +7,9 @@ const resources = [
     'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js',
     'http://127.0.0.1:5500/APACBuddy/external/apacbuddy.css',
     'https://code.jquery.com/jquery-3.7.1.js',
-    'https://code.jquery.com/ui/1.14.0/jquery-ui.js'
+    'https://code.jquery.com/ui/1.14.0/jquery-ui.js',
+    'https://unpkg.com/boxicons@2.1.4/dist/boxicons.js',
+    'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
 ]
 
 export let objectData = {};// Load all resources
