@@ -63,7 +63,7 @@ export function RenderSideSnippet(formId, version, isErrorForm) {
                             <input type="email" class="form-control form-control-sm" id="apac-email" placeholder="name@formstack.com">
                             <label for="apac-email">Email address</label>
                         </div>
-                        <button type="button" class="fw-bold btn btn-lg btn-danger" id="autofill">AutoFill</button>
+                        <button type="button" class="fw-bold btn btn-md text-white btn-danger" id="autofill">AutoFill</button>
                     ` : ``}
                   `:
             `<ul class="list-group mb-2">
