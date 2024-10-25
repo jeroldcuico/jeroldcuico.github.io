@@ -39,16 +39,16 @@ export function RenderSideSnippet(formId, version, isErrorForm) {
                         <li class="list-group-item">
                             <div class="d-flex  justify-content-evenly ">
                                 <div class="d-flex align-items-center ">
-                                    <i class="bx bxs-buildings bx-tada bx-sm"></i> 
+                                    <i class="bx bxs-buildings bx-tada bx-sm text-warning"></i> 
                                     <span style="font-size:0.75rem;"><a class="text-wrap text-break" target="_blank" href="${admin}/form/builder/${formId}/build">Builder</a></span>
                                 </div>
                                 <div class="d-flex align-items-center ">
-                                    <i class="bx bxs-cog bx-spin bx-sm"></i>
-                                    <span style="font-size:0.75rem;"><a class="text-wrap text-break" target="_blank" href="${admin}/form/settings/${formId}/general">Settings</a></span>
+                                    <i class="bx bxs-cog bx-spin bx-sm text-danger "></i>
+                                    <span style="font-size:0.75rem;"><a class="text-wrap  text-break" target="_blank" href="${admin}/form/settings/${formId}/general">Settings</a></span>
                                 </div>
                                 
                                 <div class="d-flex align-items-center ">
-                                    <i class="bx bxs-note bx-flashing bx-sm"></i>
+                                    <i class="bx bxs-note bx-flashing bx-sm text-success"></i>
                                     <span style="font-size:0.75rem;"><a class="text-wrap text-break" target="_blank"href="${admin}/submission/${formId}">Submissions</a> </span>
                                 </div>
                             </div>
