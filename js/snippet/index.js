@@ -12,33 +12,32 @@ const resources = [
 
 export let objectData = {}; // Load all resources
 
-document.addEventListener('DOMContentLoaded', function () {
-    if (isFormstackForms()) {
-        resources.forEach(loadStyleResources);
-        const getForm = document.querySelector('.fsBody form');
-        if (getForm) {
-            const v3 = getForm.querySelector('input[name="style_version"]')?.value;
-            const v4 = getForm.querySelector('input[name="formstackFormSchemaVersion"]')?.value;
-            const formId = getForm.querySelector('input[name="form"]')?.value;
-            objectData = {
-                'version': v3 ?? v4,
-                'formId': formId,
-                'isErrorForm': false
-            };
-        } else {
-            const errorForm = document.querySelector('.fsform-container')?.getAttribute('data-formid');
-            objectData = {
-                'formId': errorForm || '00000',
-                'version': errorForm ? 4 : 3,
-                'isErrorForm': true
-            };
-        }
-        /* Render Area */
-        const { version, formId, isErrorForm } = objectData;
-        RenderSideSnippet(formId, version, isErrorForm);
+if (isFormstackForms()) {
+    resources.forEach(loadStyleResources);
+    const getForm = document.querySelector('.fsBody form');
+    if (getForm) {
+        const v3 = getForm.querySelector('input[name="style_version"]')?.value;
+        const v4 = getForm.querySelector('input[name="formstackFormSchemaVersion"]')?.value;
+        const formId = getForm.querySelector('input[name="form"]')?.value;
+        objectData = {
+            'version': v3 ?? v4,
+            'formId': formId,
+            'isErrorForm': false
+        };
+    } else {
+        const errorForm = document.querySelector('.fsform-container')?.getAttribute('data-formid');
+        objectData = {
+            'formId': errorForm || '00000',
+            'version': errorForm ? 4 : 3,
+            'isErrorForm': true
+        };
     }
+    /* Render Area */
+    const { version, formId, isErrorForm } = objectData;
+    RenderSideSnippet(formId, version, isErrorForm);
+}
 
-})
+
 
 export function fsEmbedForm() {
     const elements = [
