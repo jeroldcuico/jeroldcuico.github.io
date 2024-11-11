@@ -24,7 +24,7 @@ export function RenderSideSnippet(formId, version, isErrorForm) {
                         src="https://emoji.slack-edge.com/T029D39A0/formstack/35e5975aadd50866.gif" width="30" alt="logo" class="sidenavlogo" id="sidenavlogo">
                 </a>
         </div>
-       <div class="offcanvas offcanvas-end border border-success rounded" tabindex="-1" id="offcanvasExample"
+       <div class="offcanvas offcanvas-start border border-success rounded" tabindex="-1" id="offcanvasExample"
             aria-labelledby="offcanvasExampleLabel" style="max-height:60vh;">
                 <div class="offcanvas-header bg-success bg-gradient text-white">
                     <h6 class="offcanvas-title" id="offcanvasExampleLabel">Formstack Form Information 🥰</h6>
@@ -87,7 +87,7 @@ export function RenderSideSnippet(formId, version, isErrorForm) {
         `
     const ifFormisV4 = document.querySelector('.fsform-container');
     const ifFormisV3 = document.querySelector('.fsForm');
-    const htmlsnippet = `<div id = "apac" class="m-0 p-0 position-absolute top-50 start-0" style = "z-index:9999;" > ${dataHTML}</div> `;
+    const htmlsnippet = `<div id = "apac" class="m-0 p-0 position-absolute start-0" style = "z-index:9999; top: 61% !important; " > ${dataHTML}</div> `;
     if (ifFormisV4) {
         ifFormisV4.insertAdjacentHTML('beforebegin', htmlsnippet);
         if (document.getElementById('autofill')) {
