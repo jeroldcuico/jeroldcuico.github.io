@@ -18,7 +18,7 @@ if (isFormstackForms()) {
     if (getForm) {
         const v3 = getForm.querySelector('input[name="style_version"]')?.value;
         const v4 = getForm.querySelector('input[name="formstackFormSchemaVersion"]')?.value;
-        const formId = getForm.querySelector('input[name="form"]')?.value;
+        const formId = getForm.querySelector('input[name="form"]')?.value || document.querySelector('.fsform-container').getAttribute('data-formid');
         objectData = {
             'version': v3 ?? v4,
             'formId': formId,
