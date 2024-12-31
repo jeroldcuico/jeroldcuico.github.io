@@ -5,6 +5,7 @@ import {
   isFormstackSalesforce,
   logTemplate,
 } from "../constants/constant.js";
+import { SfAppModal } from "../components/sfappmodal.js";
 
 let objectData = {}; // Load all resources
 
@@ -55,5 +56,6 @@ if (isFormstackForms() || isFormstackSalesforce()) {
 
   if (isFormstackSalesforce()) {
     logTemplate("Formstack for Salesforce");
+    SfAppModal();
   }
 }
