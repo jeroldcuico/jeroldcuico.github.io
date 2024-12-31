@@ -57,5 +57,49 @@ if (isFormstackForms() || isFormstackSalesforce()) {
   if (isFormstackSalesforce()) {
     logTemplate("Formstack for Salesforce");
     SfAppModal();
+    setTimeout(() => {
+      const dvFastForms = document.getElementById("dvFastForms");
+      const form = dvFastForms.querySelector("form");
+      const formFields = form.querySelectorAll("input, select, textarea");
+      formFields.forEach((field) => {
+        if (field.type === "hidden") return;
+
+        switch (field.type) {
+          case "select-one":
+            const dropdown = document.getElementById(field.name);
+            if (!dropdown) return console.error("Dropdown not found!");
+
+            const options = dropdown.options;
+            if (options.length <= 1)
+              return console.error("No valid options to select.");
+
+            const randomOption =
+              options[Math.floor(Math.random() * (options.length - 1)) + 1];
+            dropdown.value = randomOption.value;
+            break;
+          case "text":
+            const text = document.getElementById(field.name);
+            if (text) {
+              text.value = "Formstack Salesforce Support Test";
+            }
+            break;
+          case "textarea":
+            const textarea = document.getElementById(field.name);
+            if (textarea) {
+              textarea.value = "Formstack Salesforce Support Test";
+            }
+            break;
+          case "email":
+            const email = document.getElementById(field.name);
+            if (email) {
+              email.value = "test@email.com";
+            }
+            break;
+        }
+        console.log("Field Name:", field.name);
+        console.log("Field Type:", field.type);
+        console.log("Field Value:", field.value);
+      });
+    }, 1000);
   }
 }
