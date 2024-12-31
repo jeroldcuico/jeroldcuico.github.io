@@ -1,5 +1,4 @@
 import { URL_ADMIN } from "../constants/constant.js";
-import { objectData } from "../snippet/index.js";
 import { fsAutoFill } from "./autofill.js";
 
 export function RenderSideSnippet(formId, version, isErrorForm) {

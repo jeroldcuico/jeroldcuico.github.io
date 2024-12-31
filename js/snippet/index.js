@@ -6,7 +6,7 @@ import {
   logTemplate,
 } from "../constants/constant.js";
 
-export let objectData = {}; // Load all resources
+let objectData = {}; // Load all resources
 
 if (isFormstackForms() || isFormstackSalesforce()) {
   const resources = [
@@ -20,7 +20,6 @@ if (isFormstackForms() || isFormstackSalesforce()) {
   resources.forEach(loadStyleResources); //Load UI Resources
 
   if (isFormstackForms()) {
-    logTemplate("Formstack Core Forms");
     const getForm = document.querySelector(".fsBody form");
     if (getForm) {
       const v3 = getForm.querySelector('input[name="style_version"]')?.value;
@@ -50,6 +49,8 @@ if (isFormstackForms() || isFormstackSalesforce()) {
     /* Render Area */
     const { version, formId, isErrorForm } = objectData;
     RenderSideSnippet(formId, version, isErrorForm);
+    console.log(objectData);
+    logTemplate("Formstack Core Forms");
   }
 
   if (isFormstackSalesforce()) {
