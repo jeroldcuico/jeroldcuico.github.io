@@ -77,6 +77,18 @@ if (isFormstackForms() || isFormstackSalesforce()) {
               options[Math.floor(Math.random() * (options.length - 1)) + 1];
             dropdown.value = randomOption.value;
             break;
+          case "select-multiple":
+            const checkbox = document.getElementById(field.name);
+            if (!checkbox) return console.error("Dropdown not found!");
+
+            const optionscheck = checkbox.options;
+            if (optionscheck.length <= 1)
+              return console.error("No valid options to select.");
+
+            const randomOptioncheck =
+            optionscheck[Math.floor(Math.random() * (optionscheck.length - 1)) + 1];
+            checkbox.value = randomOptioncheck.value;
+            break;
           case "text":
             const text = document.getElementById(field.name);
             if (text) {
@@ -86,7 +98,8 @@ if (isFormstackForms() || isFormstackSalesforce()) {
           case "textarea":
             const textarea = document.getElementById(field.name);
             if (textarea) {
-              textarea.value = "Formstack Salesforce Support Test";
+              textarea.value =
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias enim, sequi inventore quidem unde possimus, similique rerum odio molestiae facere natus, nisi rem officiis nostrum pariatur temporibus. Corrupti, dicta enim!";
             }
             break;
           case "email":
