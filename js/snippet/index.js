@@ -58,6 +58,5 @@ if (isFormstackForms() || isFormstackSalesforce()) {
   if (isFormstackSalesforce()) {
     logTemplate("Formstack for Salesforce");
     SfAppModal();
-    SfAppAutofill();
   }
 }
