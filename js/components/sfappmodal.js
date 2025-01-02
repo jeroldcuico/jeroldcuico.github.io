@@ -13,7 +13,7 @@ export function SfAppModal() {
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                    <button type="button" class="fw-bold btn btn-md text-white btn-danger" id="sfappautofill">AutoFill</button>
+                    <!--<button type="button" class="fw-bold btn btn-md text-white btn-danger" id="sfappautofill">AutoFill</button>-->
                 </div>   
         </div>
         `;
