@@ -31,6 +31,7 @@ setTimeout(() => {
       const formFields = form.querySelectorAll("input, select, textarea");
       formFields.forEach((field) => {
         if (field.type === "hidden") return;
+        if (!document.getElementById(field.name)) return;
 
         switch (field.type) {
           case "select-one":
