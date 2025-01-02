@@ -6,7 +6,6 @@ import {
   logTemplate,
 } from "../constants/constant.js";
 import { SfAppModal } from "../components/sfappmodal.js";
-import { SfAppAutofill } from "../components/autofill.js";
 
 let objectData = {}; // Load all resources
 
