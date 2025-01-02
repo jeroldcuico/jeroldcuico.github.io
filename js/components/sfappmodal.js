@@ -10,10 +10,10 @@ export function SfAppModal() {
             aria-labelledby="offcanvasExampleLabel">
                 <div class="offcanvas-header bg-primary bg-gradient text-white">
                     <h6 class="offcanvas-title" id="offcanvasExampleLabel">Formstack for Salesforce 🥰</h6>
-                    <!--<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>-->
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                    <button type="button" class="fw-bold btn btn-md text-white btn-danger" id="sfappautofill">AutoFill</button>
+                    <!--<button type="button" class="fw-bold btn btn-md text-white btn-danger" id="sfappautofill">AutoFill</button>-->
                 </div>   
         </div>
         `;
