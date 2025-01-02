@@ -9,7 +9,7 @@ export function SfAppModal() {
        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
             aria-labelledby="offcanvasExampleLabel">
                 <div class="offcanvas-header bg-primary bg-gradient text-white">
-                    <h6 class="offcanvas-title" id="offcanvasExampleLabel">Formstack Form Information 🥰</h6>
+                    <h6 class="offcanvas-title" id="offcanvasExampleLabel">Formstack for Salesforce 🥰</h6>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
