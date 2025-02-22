@@ -17,9 +17,9 @@ export function loadStyleResources(url) {
 }
 
 export function loadStylesandScripts() {
-  loadStyleResources("./assets/css/bootstrap.min.css");
-  loadStyleResources("./assets/js/bootstrap.bundle.min.js");
-  loadStyleResources("./assets/css/apacbuddy.css");
-  loadStyleResources("./assets/css/boxicons.min.css");
-  loadStyleResources("./assets/js/boxicons.js");
+  loadStyleResources("https://jeroldcuico.github.io/apacbuddy/assets/apacbuddy.css");
+  loadStyleResources("https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"  );
+  loadStyleResources("https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js");
+  loadStyleResources("https://unpkg.com/boxicons@2.1.4/dist/boxicons.js");
+  loadStyleResources("https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css");
 }
