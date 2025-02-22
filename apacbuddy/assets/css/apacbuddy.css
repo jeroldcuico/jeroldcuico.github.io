@@ -1,6 +1,61 @@
-button, input, optgroup, select, textarea {
-    margin: unset !important;
-    font-family: unset !important;
-    font-size: unset !important;
-    line-height: unset !important;
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: unset !important;
+  font-family: unset !important;
+  font-size: unset !important;
+  line-height: unset !important;
+}
+
+.fab-container {
+  display: flex;
+  top: 60%;
+  flex-direction: row;
+  align-items: center;
+  z-index: 1050;
+}
+
+.fab {
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.sub-button {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.fab-container:hover .sub-button {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.fab-container:hover .sub-button:nth-child(2) {
+  transform: translateX(10px);
+
+}
+
+.fab-container:hover .sub-button:nth-child(3) {
+  transform: translateX(15px);
+}
+
+
+.rotatecases {
+  display: inline-block;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+      transform: rotatecases(0deg);
+  }
+  to {
+      transform: rotatecases(360deg);
+  }
 }
