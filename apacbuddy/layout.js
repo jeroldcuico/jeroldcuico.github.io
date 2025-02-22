@@ -4,4 +4,4 @@ loadStylesandScripts();
 const app = SidebarIcon();
 
 //Added to body tag
-document.querySelector('.fsform-container').insertAdjacentHTML("beforebegin", app);
+document.body.insertAdjacentHTML("afterbegin", app);
