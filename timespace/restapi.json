@@ -1,0 +1,24 @@
+{
+    "users": [
+        {
+            "name": "Jerold Cuico",
+            "user": "admin",
+            "product": "form"
+        },
+        {
+            "name": "Arthur Tapang",
+            "user": "admin",
+            "product": "workflow"
+        },
+        {
+            "name": "Ryan Edioma",
+            "user": "user",
+            "product": "form"
+        },
+        {
+            "name": "John Paul Mag asin",
+            "user": "user",
+            "product": "form"
+        }
+    ]
+}
