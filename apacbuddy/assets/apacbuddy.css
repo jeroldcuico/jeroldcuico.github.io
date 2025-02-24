@@ -16,7 +16,7 @@ textarea {
 }
 .fab-container {
   display: flex;
-  top:46%;
+  top:55%;
   flex-direction: row;
   align-items: center;
   z-index: 1050;
