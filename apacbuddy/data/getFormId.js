@@ -3,8 +3,8 @@ export function getFormId() {
     const dataid = formContainer ? formContainer.getAttribute("data-formid") : null;
     const formError = document.getElementById("error") || document.querySelector(".formError"); // If workflow is unpublished
     const isFormDisabled = document.querySelector('[class*="StyledErrorBanner"]'); // If form is unpublished and disabled
-    const product = location.pathname.split("/")[1];
-    const user = window.location.hostname;  
+    const [product , formlinkName] = location.pathname.split("/").filter(Boolean)
+    const formName = document.title.replace(/ - Formstack/g, "")
    
     let version = null;
   
@@ -20,7 +20,8 @@ export function getFormId() {
       isErrorForm: !!(formError || isFormDisabled),
       version: version,
       product: product,
-      user: user,
+      formPathname: `${product}/${formlinkName}`,
+      formName: formName,
       errorId: document.getElementById("error")?.textContent || null
     };
   }

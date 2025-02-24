@@ -5,7 +5,7 @@ export function SidebarIcon() {
   return `
     <div id="sidenav">
         <div class="m-0 p-0 position-absolute start-0 fab-container">
-            <div class="btn btn-success m-0 p-1 fab shadow">
+            <div class="bg-success rounded m-0 p-1 fab shadow">
                     <img src="https://emoji.slack-edge.com/T029D39A0/formstack/35e5975aadd50866.gif" alt="sidebar" width="35">
             </div>
             <div class="sub-button shadow-sm border border-success border-3 rounded">          

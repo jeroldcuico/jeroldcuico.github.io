@@ -18,6 +18,7 @@ function getRandomImages(arr, num) {
     return Array.from(uniqueImages);
   }
 const selectedImages = getRandomImages(images, 3);
+
 export function sideBarFooter() {
     return `
       <div class="d-flex justify-content-between align-items-center fs-7 fw-bold mt-4">
@@ -28,12 +29,3 @@ export function sideBarFooter() {
       </div>
       `;
 }
-
-function updateImages() {
-    const footerCredits = document.getElementById("footerCredits");
-    if (footerCredits) {
-      const newImages = getRandomImages(images, 3);
-      footerCredits.innerHTML = newImages.map(i => `<img src="${i}" style="width: 30px; height: 30px;">`).join('');
-    }
-  }
-  setInterval(updateImages, 2000);
