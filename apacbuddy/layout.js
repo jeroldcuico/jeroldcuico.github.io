@@ -5,5 +5,5 @@ import { SidebarIcon } from "./components/sidebar.js";
 if (isFormstackForms()) {
   const app = SidebarIcon();
   loadStylesandScripts();
-  document.body.insertAdjacentHTML("afterbegin", app);
+  document.body.insertAdjacentHTML("afterbegin", app);  
 }

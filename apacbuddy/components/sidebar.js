@@ -4,7 +4,7 @@ import { newFeature } from "./whatsnew.js";
 export function SidebarIcon() {
   return `
     <div id="sidenav">
-        <div class="m-0 p-0 position-absolute start-0 fab-container " style="z-index:9999;">
+        <div class="m-0 p-0 position-absolute start-0 fab-container">
             <div class="btn btn-success m-0 p-1 fab shadow">
                     <img src="https://emoji.slack-edge.com/T029D39A0/formstack/35e5975aadd50866.gif" alt="sidebar" width="35">
             </div>

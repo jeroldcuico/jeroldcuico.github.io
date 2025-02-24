@@ -12,12 +12,11 @@ textarea {
 
 #sidenav{
   font-family: "Poppins", serif;
-  font-weight: 300;
-  font-style: bold;
+  font-weight: 500;
 }
 .fab-container {
   display: flex;
-  top: 60%;
+  top:40%;
   flex-direction: row;
   align-items: center;
   z-index: 1050;
