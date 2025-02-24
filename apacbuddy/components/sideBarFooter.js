@@ -13,16 +13,20 @@ const images = [
 ];
 
 function getRandomImages(arr, num) {
-  let shuffled = arr.sort(() => 0.5 - Math.random());
-  return shuffled.slice(0, num);
-}
+    let uniqueImages = new Set();
+    while (uniqueImages.size < num) {
+      let randomImage = arr[Math.floor(Math.random() * arr.length)];
+      uniqueImages.add(randomImage);
+    }
+    return Array.from(uniqueImages);
+  }
 const selectedImages = getRandomImages(images, 3);
 export function sideBarFooter() {
     return `
       <div class="d-flex justify-content-between align-items-center fs-7 fw-bold mt-4">
           <div style="font-size:0.75rem;">Show some tacos with love</div>
-          <div id="footerCredits">
-              ${selectedImages.map(i => `<img src="${i}" style="width: 30px; height:30px;">`).join('')}
+          <div id="footerCredits d-flex gap-2">
+              ${setInterval(() => selectedImages.map(i => `<img src="${i}" style="width: 30px; height:30px;">`).join('') , 10000)}
           </div>
       </div>
       `;
