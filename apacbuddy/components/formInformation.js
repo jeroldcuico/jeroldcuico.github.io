@@ -5,7 +5,7 @@ import { sideBarFooter } from "./sideBarFooter.js";
 export function formInformation() {
   const { isErrorForm } = getFormId();
   return `
-    <div style="max-height:50%;" class="mx-2 my-2 offcanvas offcanvas-start border border-${isErrorForm === false ? `success` : `danger`} rounded" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" aria-modal="true" role="dialog">
+    <div style="max-height:55%;" class="mx-2 offcanvas offcanvas-start border border-${isErrorForm === false ? `success` : `danger`} rounded" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" aria-modal="true" role="dialog">
             <div class="offcanvas-header bg-${isErrorForm === false  ? `success` : `danger` } bg-gradient text-white d-flex justify-content-between">
                 <h6 class="offcanvas-title" id="offcanvasExampleLabel">Formstack Form Information 🥰</h6>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
