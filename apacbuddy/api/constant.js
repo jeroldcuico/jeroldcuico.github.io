@@ -7,3 +7,8 @@ export function isFormstackForms() {
   const hasIndexPhp = /index\.php/i;
   return regex.test(url) && !hasIndexPhp.test(url);
 }
+
+export function isFormstackSalesforce() {
+  const regex = /formstack\.io\//;
+  return regex.test(url);
+}

@@ -1,5 +1,6 @@
 import { formInformation } from "./formInformation.js";
 import { newFeature } from "./whatsnew.js";
+
 export function SidebarIcon() {
   return `
     <div id="sidenav">
