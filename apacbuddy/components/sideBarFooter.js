@@ -26,8 +26,18 @@ export function sideBarFooter() {
       <div class="d-flex justify-content-between align-items-center fs-7 fw-bold mt-4">
           <div style="font-size:0.75rem;">Show some tacos with love</div>
           <div id="footerCredits d-flex gap-2">
-              ${setInterval(() => selectedImages.map(i => `<img src="${i}" style="width: 30px; height:30px;">`).join('') , 10000)}
+              ${selectedImages.map(i => `<img src="${i}" style="width: 30px; height:30px;">`).join('')}
           </div>
       </div>
       `;
   }
+
+function updateImages() {
+    const footerCredits = document.getElementById("footerCredits");
+    if (footerCredits) {
+      const newImages = getRandomImages(images, 3);
+      footerCredits.innerHTML = newImages.map(i => `<img src="${i}" style="width: 30px; height: 30px;">`).join('');
+      console.log('hello')
+    }
+  }
+  setInterval(updateImages, 2000);
