@@ -4,9 +4,6 @@ const images = [
   "https://emoji.slack-edge.com/T029D39A0/dance_jerold/ba061b41981e9cab.gif",
   "https://emoji.slack-edge.com/T029D39A0/happy_jason/d4ce1633ba927b74.png",
   "https://emoji.slack-edge.com/T029D39A0/smileroma/df442d86c5de97b0.png",
-  "https://emoji.slack-edge.com/T029D39A0/dance_jeffrey/a99f1eb901b3f471.gif",
-  "https://emoji.slack-edge.com/T029D39A0/dance_poldo/6cee398483a5f70a.gif",
-  "https://emoji.slack-edge.com/T029D39A0/dance_jeffrey/a99f1eb901b3f471.gif",
   "https://emoji.slack-edge.com/T029D39A0/formstack/35e5975aadd50866.gif",
   "https://emoji.slack-edge.com/T029D39A0/cute_peace_jerold/6decf7ca78bf4b7f.png",
   "https://emoji.slack-edge.com/T029D39A0/tromatized/93d6aaf36c526bb4.png",
@@ -30,14 +27,13 @@ export function sideBarFooter() {
           </div>
       </div>
       `;
-  }
+}
 
 function updateImages() {
     const footerCredits = document.getElementById("footerCredits");
     if (footerCredits) {
       const newImages = getRandomImages(images, 3);
       footerCredits.innerHTML = newImages.map(i => `<img src="${i}" style="width: 30px; height: 30px;">`).join('');
-      console.log('hello')
     }
   }
   setInterval(updateImages, 2000);
