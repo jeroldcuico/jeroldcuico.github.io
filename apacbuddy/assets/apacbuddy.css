@@ -19,7 +19,7 @@ textarea {
   top:55%;
   flex-direction: row;
   align-items: center;
-  z-index: 1050;
+  z-index: 9999;
 }
 
 .fab {
