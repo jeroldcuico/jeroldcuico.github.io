@@ -5,7 +5,7 @@ export function formDataBuilder() {
 
   console.log(getFormId());
 
-  if (isErrorForm === true && formid !== null)
+  if (isErrorForm === true && formid !== null && formPathname.includes('forms'))
     return `
         <ul class="list-group mb-2 text-wrap">
             <li class="list-group-item"><span class="badge text-bg-primary">Form ID:</span> ${formid}</li>
@@ -17,20 +17,30 @@ export function formDataBuilder() {
         </ul>
  `;
 
-    if (isErrorForm === true && formid === null)
+    if (isErrorForm === true && formPathname.includes('workflows'))
         return `
-            <div class="card mb-2">
-                <div class="card-header text-center fw-bolder">
-                    WORKFLOW UNPUBLISHED
+            <ul class="list-group mb-2 text-wrap">
+            <li class="list-group-item text-center fw-bold">WORKFLOW UNPUBLISHED</li>
+            <li class="list-group-item"><span class="badge text-bg-primary">Form ID:</span> ${formid}</li>
+            <li class="list-group-item"><span class="badge text-bg-dark">Form Name:</span> ${formName}</li>
+            <li class="list-group-item">
+                <div class="d-flex  justify-content-evenly ">
+                    <div class="d-flex align-items-center ">
+                        <i class="bx bxs-buildings bx-tada bx-sm text-warning"></i> 
+                        <span style="font-size:0.75rem;"><a class="text-wrap text-break" target="_blank" href="${URL_ADMIN}/form/builder/${formid}/build">Builder</a></span>
+                    </div>
+                    <div class="d-flex align-items-center ">
+                        <i class="bx bxs-cog bx-spin bx-sm text-danger "></i>
+                        <span style="font-size:0.75rem;"><a class="text-wrap  text-break" target="_blank" href="${URL_ADMIN}/form/settings/${formid}/general">Settings</a></span>
+                    </div>
+                    
+                    <div class="d-flex align-items-center ">
+                        <i class="bx bxs-note bx-flashing bx-sm text-success"></i>
+                        <span style="font-size:0.75rem;"><a class="text-wrap text-break" target="_blank"href="${URL_ADMIN}/submission/${formid}">Submissions</a> </span>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <h5 class="card-title">Things to do</h5>
-                    <p class="card-text">Copy the this error ID <strong class="text-danger">${formPathname}</strong> and paste it in <strong class="text-warning">SUMO</strong></p>
-                </div>
-                <div class="card-footer text-muted fw-bolder">
-                    Just chill!
-                </div>
-            </div>
+            </li>  
+        </ul>
     `;
 
 
