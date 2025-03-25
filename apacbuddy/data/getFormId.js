@@ -14,11 +14,12 @@ export function getFormId() {
         version = getForm.formstackFormSchemaVersion.value;
       }
     }
+    const version_3 = document.querySelector(".fsForm > input[name=style_version]").value;
   
     return {
       formid: dataid ?? document.querySelector(".fsForm > input[name=form]").value,
       isErrorForm: !!(formError || isFormDisabled),
-      version: version || document.querySelector(".fsForm > input[name=style_version]").value,
+      version: version || version_3 ? version_3 : null,
       product: product,
       formPathname: `${product}/${formlinkName}`,
       formName: formName,
