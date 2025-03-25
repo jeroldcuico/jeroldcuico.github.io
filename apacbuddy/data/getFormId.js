@@ -18,7 +18,7 @@ export function getFormId() {
     return {
       formid: dataid ?? document.querySelector(".fsForm > input[name=form]").value,
       isErrorForm: !!(formError || isFormDisabled),
-      version: version ?? document.querySelector(".fsForm > input[name=style_version]").value,
+      version: version || document.querySelector(".fsForm > input[name=style_version]").value,
       product: product,
       formPathname: `${product}/${formlinkName}`,
       formName: formName,
