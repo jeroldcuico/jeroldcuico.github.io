@@ -5,7 +5,7 @@ export function formDataBuilder() {
 
   console.log(getFormId());
 
-  if (isErrorForm === true && formid !== null && formPathname.includes('forms'))
+  if (errorId === null && formid !== null && formPathname.includes('forms'))
     return `
         <ul class="list-group mb-2 text-wrap">
             <li class="list-group-item"><span class="badge text-bg-primary">Form ID:</span> ${formid}</li>
