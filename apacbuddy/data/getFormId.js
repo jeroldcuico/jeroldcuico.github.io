@@ -2,7 +2,7 @@ export function getFormId() {
     const formContainer = document.querySelector(".fsform-container");
     const dataid = formContainer ? formContainer.getAttribute("data-formid") : null;
     const formError = document.getElementById("error") || document.querySelector(".formError"); // If workflow is unpublished
-    const isFormDisabled = document.querySelector('[class*="StyledErrorBanner"]'); // If form is unpublished and disabled
+    const isFormDisabled = document.querySelector('[class*="StyledErrorBannerIcon"]'); // If form is unpublished and disabled
     const [product , formlinkName] = location.pathname.split("/").filter(Boolean)
     const formName = document.title.replace(/ - Formstack/g, "")
    
