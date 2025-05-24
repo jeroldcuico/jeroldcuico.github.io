@@ -5,7 +5,7 @@ import { HiPencilAlt } from 'react-icons/hi'
 
 const getLists = async () => {
     try {
-        const res = await fetch('http://localhost:3000/api/lists', {
+        const res = await fetch('https://jeroldcuico-github-2y34flqvx-jerolds-projects.vercel.app/api/lists', {
             cache: 'no-store',
         })
 
@@ -24,7 +24,7 @@ export default async function () {
 
     return (
         <>
-            {lists.map((t) =>
+            {lists?.map((t) =>
                 <div className="p-4 border border-slate-800 flex justify-between gap-2 my-3">
                     <div>
                         <h2 className="font-bold text-2xl">{t.title}</h2>
